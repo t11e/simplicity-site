@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simplicity Widgets - simplicityState</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="//cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="//cdn.transparensee.com/simplicity/3.2/simplicity.min.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/documentation.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Simplicity Widgets</a>
+          <ul class="nav">
+            
+              
+                <li><a href="/">home</a></li>
+              
+            
+              
+                <li class="active"><a href="/userguide/" class="active">userguide</a></li>
+              
+            
+              
+                <li><a href="/download.html">download</a></li>
+              
+            
+              
+                <li><a href="/jsdoc/">jsdoc</a></li>
+              
+            
+              
+                <li><a href="/changelog.html">changelog</a></li>
+              
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+      <header class="subhead">
+        <div class="container">
+          <h1>simplicityState</h1>
+          
+            <p class="lead">Recording the question.</p>
+          
+        </div>
+      </header>
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <div class="container">
+<div class='userguide-nav row'>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Basics</li>
+            <li class=''><a href='/userguide/'>Getting started</a></li>
+            <li class=''><a href='/userguide/primer.html'>Primer</a></li>
+            <li class=''><a href='/userguide/widgetgroups.html'>Widget groups</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Search</li>
+            <li class='active'><a href='/userguide/simplicityState.html'>simplicityState</a></li>
+            <li class=''><a href='/userguide/simplicityDiscoverySearch.html'>simplicityDiscoverySearch</a></li>
+            <li class=''><a href='/userguide/simplicityInputs.html'>simplicityInputs</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Response Widgets</li>
+            <li class=''><a href='/userguide/simplicitySearchResults.html'>simplicitySearchResults</a></li>
+            <li class=''><a href='/userguide/simplicityFacetedSelect.html'>simplicityFacetedSelect</a></li>
+        </ul>
+    </div>
+</div><div class='userguide-nav row'>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>User Interface</li>
+            <li class=''><a href='/userguide/simplicityFancySelect.html'>simplicityFancySelect</a></li>
+            <li class=''><a href='/userguide/simplicitySelectSlider.html'>simplicitySelectSlider</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Mapping</li>
+            <li class=''><a href='/userguide/googleMaps.html'>Google Maps</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Examples</li>
+            <li class=''><a href='/userguide/example/gettingstarted.html'>Getting Started</a></li>
+        </ul>
+    </div>
+</div><div class='page-header'>
+  <h1>simplicityState</h1>
+</div>
+<p>The <code>simplicityState</code> widget wraps a <a href='http://www.json.org'>JSON</a> representation of state which is typially used for driving search.</p>
+
+<p>In the common case each page contains just one <code>simplicityState</code> widget bound to the <code>body</code> element.</p>
+
+<p>To create an empty state.</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;body&#39;</span><span class='p'>).</span><span class='nx'>simplicityState</span><span class='p'>();</span>
+</code></pre>
+</div>
+<p>To create a pre-populated state, you&#8217;d use the <code>initialState</code> option.</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;body&#39;</span><span class='p'>).</span><span class='nx'>simplicityState</span><span class='p'>({</span>
+  <span class='nx'>example</span><span class='o'>:</span> <span class='s1'>&#39;this is my default state&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+<p>To obtain the current state.</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;body&#39;</span><span class='p'>).</span><span class='nx'>simplicityState</span><span class='p'>(</span><span class='s1'>&#39;state&#39;</span><span class='p'>);</span>
+</code></pre>
+</div>
+<p>To set the current state.</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;body&#39;</span><span class='p'>).</span><span class='nx'>simplicityState</span><span class='p'>(</span><span class='s1'>&#39;state&#39;</span><span class='p'>,</span> <span class='p'>{</span>
+  <span class='nx'>example</span><span class='o'>:</span> <span class='s1'>&#39;this is my new state&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+<p>To get notified when the state changes. Note that the widget uses <a href='http://api.jquery.com/triggerHandler/'>$.triggerHandler</a> to prevent event bubbling.</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;body&#39;</span><span class='p'>).</span><span class='nx'>bind</span><span class='p'>(</span><span class='s1'>&#39;simplicityStateChange&#39;</span><span class='p'>,</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>state</span><span class='p'>)</span> <span class='p'>{</span>
+  <span class='nx'>console</span><span class='p'>.</span><span class='nx'>log</span><span class='p'>(</span><span class='s1'>&#39;state changed to&#39;</span><span class='p'>,</span> <span class='nx'>state</span><span class='p'>);</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+            <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top</a>
+        </p>
+        <p>
+          Designed and built by the good folks at <a href="http://transparensee.com">Transparensee Systems</a>.
+        </p>
+      </div>
+    </footer>
+    <!--[if IE]>
+      <script src="//cdn.transparensee.com/lib/xdr/984c41/xdr.min.js"></script>
+      <script src="//cdn.transparensee.com/lib/json2/2010-11-17/json2.min.js"></script>
+      <script src="//cdn.transparensee.com/lib/jquery-plugin/bgiframe/2.1.2/jquery.bgiframe.min.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+    <script src="//cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="//cdn.transparensee.com/lib/jquery-plugin/bbq/1.2.1/jquery.ba-bbq.min.js"></script>
+    <script src="//cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.js"></script>
+    <script src="//cdn.transparensee.com/simplicity/3.2/simplicity.min.js"></script>
+    <script src="/js/documentation.js"></script>
+  </body>
+</html>

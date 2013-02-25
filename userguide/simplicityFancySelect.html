@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simplicity Widgets - simplicityFancySelect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="//cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="//cdn.transparensee.com/simplicity/3.2/simplicity.min.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/documentation.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Simplicity Widgets</a>
+          <ul class="nav">
+            
+              
+                <li><a href="/">home</a></li>
+              
+            
+              
+                <li class="active"><a href="/userguide/" class="active">userguide</a></li>
+              
+            
+              
+                <li><a href="/download.html">download</a></li>
+              
+            
+              
+                <li><a href="/jsdoc/">jsdoc</a></li>
+              
+            
+              
+                <li><a href="/changelog.html">changelog</a></li>
+              
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+      <header class="subhead">
+        <div class="container">
+          <h1>simplicityFancySelect</h1>
+          
+            <p class="lead">Unrolling the options.</p>
+          
+        </div>
+      </header>
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <div class="container">
+<div class='userguide-nav row'>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Basics</li>
+            <li class=''><a href='/userguide/'>Getting started</a></li>
+            <li class=''><a href='/userguide/primer.html'>Primer</a></li>
+            <li class=''><a href='/userguide/widgetgroups.html'>Widget groups</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Search</li>
+            <li class=''><a href='/userguide/simplicityState.html'>simplicityState</a></li>
+            <li class=''><a href='/userguide/simplicityDiscoverySearch.html'>simplicityDiscoverySearch</a></li>
+            <li class=''><a href='/userguide/simplicityInputs.html'>simplicityInputs</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Response Widgets</li>
+            <li class=''><a href='/userguide/simplicitySearchResults.html'>simplicitySearchResults</a></li>
+            <li class=''><a href='/userguide/simplicityFacetedSelect.html'>simplicityFacetedSelect</a></li>
+        </ul>
+    </div>
+</div><div class='userguide-nav row'>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>User Interface</li>
+            <li class='active'><a href='/userguide/simplicityFancySelect.html'>simplicityFancySelect</a></li>
+            <li class=''><a href='/userguide/simplicitySelectSlider.html'>simplicitySelectSlider</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Mapping</li>
+            <li class=''><a href='/userguide/googleMaps.html'>Google Maps</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Examples</li>
+            <li class=''><a href='/userguide/example/gettingstarted.html'>Getting Started</a></li>
+        </ul>
+    </div>
+</div><div class='page-header'>
+  <h1>simplicityFancySelect</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            To enhance a <code>&lt;select></code> by applying a HTML template to
+            it, first create the select and a target <code>div</code>.
+        </p>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;&quot;</span><span class='nt'>&gt;</span>Any...<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;1&quot;</span> <span class='na'>data-count=</span><span class='s'>&quot;3&quot;</span><span class='nt'>&gt;</span>First<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;2&quot;</span> <span class='na'>data-count=</span><span class='s'>&quot;11&quot;</span><span class='nt'>&gt;</span>Second<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;3&quot;</span> <span class='na'>data-count=</span><span class='s'>&quot;6&quot;</span><span class='nt'>&gt;</span>Third<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;div&gt;&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <p>Then apply the <code>simplicityFancySelect</code> widget to it.</p>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicityFancySelect</span><span class='p'>({</span>
+    <span class='nx'>select</span><span class='o'>:</span> <span class='s1'>&#39;#example select&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleFancySelect1'>
+            <label><span class='badge'>1</span> select</label>
+            <select name='example'>
+                <option value=''>Any...</option>
+                <option data-count='3' value='1'>First</option>
+                <option data-count='11' value='2'>Second</option>
+                <option data-count='6' value='3'>Third</option>
+            </select>
+            <label><span class='badge'>2</span> fancy select</label>
+            <div class='well'> </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleFancySelect1 div').simplicityFancySelect({
+                  select: '#exampleFancySelect1 select'
+                });
+            });
+        </script>
+        <p>
+            Change the selection in <span class='badge'>1</span> and the visible
+            state in <span class='badge'>2</span> is updated.
+        </p>
+        <p>
+            Click on rows in <span class='badge'>2</span> and the value in
+            <span class='badge'>1</span> is updated.
+        </p>
+    </div>
+</div><div class='page-header'>
+  <h1>Templating</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            The HTML template can be customized in two different ways. You can
+            either set the <code>template</code> option to a valid HTML content
+            string or set it to <code>''</code> and place the template in the
+            DOM.
+        </p>
+        <p>
+            Let's configure the widget to use a trimmed down version of the HTML
+            (excluding the facet count data attribute).
+        </p>
+    </div>
+</div><div class='page-header'>
+  <h2>Option template</h2>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            First by using the <code>template</code> widget option.
+        </p>
+        <h3>HTML</h3>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;&quot;</span><span class='nt'>&gt;</span>Any...<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;1&quot;</span><span class='nt'>&gt;</span>First<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;2&quot;</span><span class='nt'>&gt;</span>Second<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;3&quot;</span><span class='nt'>&gt;</span>Third<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;div&gt;&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <h3>JavaScript</h3>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicityFancySelect</span><span class='p'>({</span>
+    <span class='nx'>select</span><span class='o'>:</span> <span class='s1'>&#39;#example select&#39;</span><span class='p'>,</span>
+    <span class='nx'>template</span><span class='o'>:</span> <span class='s1'>&#39;&lt;ul class=&quot;options&quot;&gt;&lt;li class=&quot;option&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;label&quot;/&gt;&lt;/li&gt;&lt;/ul&gt;&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleFancySelect2'>
+            <select name='example'>
+                <option value=''>Any...</option>
+                <option value='1'>First</option>
+                <option value='2'>Second</option>
+                <option value='3'>Third</option>
+            </select>
+            <div class='well'> </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleFancySelect2 div').simplicityFancySelect({
+                  select: '#exampleFancySelect2 select',
+                  template: "<ul class='options'><li class='option'><a class='label' href='#' /></li></ul>"
+                });
+            });
+        </script>
+    </div>
+</div><div class='page-header'>
+  <h2>DOM template</h2>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            Second, by using the DOM target to specify the template.
+        </p>
+        <h3>HTML</h3>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;&quot;</span><span class='nt'>&gt;</span>Any...<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;1&quot;</span><span class='nt'>&gt;</span>First<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;2&quot;</span><span class='nt'>&gt;</span>Second<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;3&quot;</span><span class='nt'>&gt;</span>Third<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;div&gt;</span>
+        <span class='nt'>&lt;ul</span> <span class='na'>class=</span><span class='s'>&quot;options&quot;</span><span class='nt'>&gt;</span>
+            <span class='nt'>&lt;li</span> <span class='na'>class=</span><span class='s'>&quot;option&quot;</span><span class='nt'>&gt;&lt;a</span> <span class='na'>href=</span><span class='s'>&quot;#&quot;</span> <span class='na'>class=</span><span class='s'>&quot;label&quot;</span><span class='nt'>&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class='nt'>&lt;/ul&gt;</span>
+    <span class='nt'>&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <p>
+            JavaScript. Note that we override the <code>template</code> option to be
+            <code>''</code> so that the widget falls back to the DOM element's
+            contents.
+        </p>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicityFancySelect</span><span class='p'>({</span>
+    <span class='nx'>select</span><span class='o'>:</span> <span class='s1'>&#39;#example select&#39;</span><span class='p'>,</span>
+    <span class='nx'>template</span><span class='o'>:</span> <span class='s1'>&#39;&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleFancySelect3'>
+            <select name='example'>
+                <option value=''>Any...</option>
+                <option value='1'>First</option>
+                <option value='2'>Second</option>
+                <option value='3'>Third</option>
+            </select>
+            <div class='well'>
+                <ul class='options'>
+                    <li class='option'><a class='label' href='#'> </a></li>
+                </ul>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleFancySelect3 div').simplicityFancySelect({
+                  select: '#exampleFancySelect3 select',
+                  template: ''
+                });
+            });
+        </script>
+    </div>
+</div><div class='page-header'>
+  <h1>Multi Select</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            If the <code>select</code> is configured to support multiple
+            selection, then you can select multiple rows in the fancy version.
+        </p>
+        <h3>HTML</h3>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span> <span class='na'>multiple=</span><span class='s'>&quot;multiple&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;1&quot;</span><span class='nt'>&gt;</span>First<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;2&quot;</span><span class='nt'>&gt;</span>Second<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;3&quot;</span><span class='nt'>&gt;</span>Third<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;4&quot;</span><span class='nt'>&gt;</span>Fourth<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;5&quot;</span><span class='nt'>&gt;</span>Fifth<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;div&gt;</span>
+        <span class='nt'>&lt;ul</span> <span class='na'>class=</span><span class='s'>&quot;options&quot;</span><span class='nt'>&gt;</span>
+            <span class='nt'>&lt;li</span> <span class='na'>class=</span><span class='s'>&quot;option&quot;</span><span class='nt'>&gt;&lt;a</span> <span class='na'>href=</span><span class='s'>&quot;#&quot;</span> <span class='na'>class=</span><span class='s'>&quot;label&quot;</span><span class='nt'>&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class='nt'>&lt;/ul&gt;</span>
+    <span class='nt'>&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <h3>JavaScript</h3>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicityFancySelect</span><span class='p'>({</span>
+    <span class='nx'>select</span><span class='o'>:</span> <span class='s1'>&#39;#example select&#39;</span><span class='p'>,</span>
+    <span class='nx'>template</span><span class='o'>:</span> <span class='s1'>&#39;&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleFancySelect4'>
+            <label><span class='badge'>1</span> select</label>
+            <select multiple='multiple' name='example' size='5'>
+                <option value='1'>First</option>
+                <option value='2'>Second</option>
+                <option value='3'>Third</option>
+                <option value='4'>Fourth</option>
+                <option value='5'>Fifth</option>
+            </select>
+            <label><span class='badge'>2</span> fancy select</label>
+            <div class='well'>
+                <ul class='options'>
+                    <li class='option'><a class='label' href='#'> </a></li>
+                </ul>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleFancySelect4 div').simplicityFancySelect({
+                  select: '#exampleFancySelect4 select',
+                  template: ''
+                });
+            });
+        </script>
+        <p>
+            Change the selection in <span class='badge'>1</span> and the visible
+            state in <span class='badge'>2</span> is updated.
+        </p>
+        <p>
+            Click on rows in <span class='badge'>2</span> and the value in
+            <span class='badge'>1</span> is updated.
+        </p>
+    </div>
+</div><div class='page-header'>
+  <h1>Checkboxes</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            You can enable support for checkboxes by adding the
+            <code>option-checkbox</code> class to them.
+        </p>
+        <h3>HTML</h3>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span> <span class='na'>multiple=</span><span class='s'>&quot;multiple&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;1&quot;</span><span class='nt'>&gt;</span>First<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;2&quot;</span><span class='nt'>&gt;</span>Second<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;3&quot;</span><span class='nt'>&gt;</span>Third<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;4&quot;</span><span class='nt'>&gt;</span>Fourth<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;5&quot;</span><span class='nt'>&gt;</span>Fifth<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;div&gt;</span>
+        <span class='nt'>&lt;ul</span> <span class='na'>class=</span><span class='s'>&quot;options&quot;</span><span class='nt'>&gt;</span>
+            <span class='nt'>&lt;li</span> <span class='na'>class=</span><span class='s'>&quot;option&quot;</span><span class='nt'>&gt;</span>
+                <span class='nt'>&lt;label&gt;</span>
+                    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;checkbox&quot;</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span> <span class='na'>class=</span><span class='s'>&quot;option-checkbox&quot;</span> <span class='nt'>/&gt;</span>
+                    <span class='nt'>&lt;span</span> <span class='na'>class=</span><span class='s'>&quot;label&quot;</span><span class='nt'>&gt;&lt;/span&gt;</span>
+                <span class='nt'>&lt;/label&gt;</span>
+            <span class='nt'>&lt;/li&gt;</span>
+        <span class='nt'>&lt;/ul&gt;</span>
+    <span class='nt'>&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <h3>JavaScript</h3>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicityFancySelect</span><span class='p'>({</span>
+    <span class='nx'>select</span><span class='o'>:</span> <span class='s1'>&#39;#example select&#39;</span><span class='p'>,</span>
+    <span class='nx'>template</span><span class='o'>:</span> <span class='s1'>&#39;&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleFancySelect5'>
+            <select multiple='multiple' name='example' size='5'>
+                <option value='1'>First</option>
+                <option value='2'>Second</option>
+                <option value='3'>Third</option>
+                <option value='4'>Fourth</option>
+                <option value='5'>Fifth</option>
+            </select>
+            <div class='well'>
+                <ul class='options'>
+                    <li class='option'>
+                        <label>
+                            <input class='option-checkbox' name='example' type='checkbox' />
+                            <span class='label'> </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleFancySelect5 div').simplicityFancySelect({
+                  select: '#exampleFancySelect5 select',
+                  template: ''
+                });
+            });
+        </script>
+    </div>
+</div><div class='page-header'>
+  <h1>Radio Buttons</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            Radio buttons can also be used by using the <code>radioStyle</code>
+            and <code>checkableInputSelector</code> options.
+        </p>
+        <h3>HTML</h3>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;&quot;</span><span class='nt'>&gt;</span>Any...<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;1&quot;</span><span class='nt'>&gt;</span>First<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;2&quot;</span><span class='nt'>&gt;</span>Second<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;3&quot;</span><span class='nt'>&gt;</span>Third<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;4&quot;</span><span class='nt'>&gt;</span>Fourth<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;5&quot;</span><span class='nt'>&gt;</span>Fifth<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;div&gt;</span>
+        <span class='nt'>&lt;ul</span> <span class='na'>class=</span><span class='s'>&quot;options&quot;</span><span class='nt'>&gt;</span>
+            <span class='nt'>&lt;li</span> <span class='na'>class=</span><span class='s'>&quot;option&quot;</span><span class='nt'>&gt;</span>
+                <span class='nt'>&lt;label&gt;</span>
+                    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;radio&quot;</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span> <span class='na'>class=</span><span class='s'>&quot;option-radio&quot;</span> <span class='nt'>/&gt;</span>
+                    <span class='nt'>&lt;span</span> <span class='na'>class=</span><span class='s'>&quot;label&quot;</span><span class='nt'>&gt;&lt;/span&gt;</span>
+                <span class='nt'>&lt;/label&gt;</span>
+            <span class='nt'>&lt;/li&gt;</span>
+        <span class='nt'>&lt;/ul&gt;</span>
+    <span class='nt'>&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <h3>JavaScript</h3>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicityFancySelect</span><span class='p'>({</span>
+    <span class='nx'>select</span><span class='o'>:</span> <span class='s1'>&#39;#example select&#39;</span><span class='p'>,</span>
+    <span class='nx'>template</span><span class='o'>:</span> <span class='s1'>&#39;&#39;</span><span class='p'>,</span>
+    <span class='nx'>radioStyle</span><span class='o'>:</span> <span class='kc'>true</span><span class='p'>,</span>
+    <span class='nx'>checkableInputSelector</span><span class='o'>:</span> <span class='s1'>&#39;:radio.option-radio&#39;</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleFancySelect6'>
+            <select name='example'>
+                <option value=''>Any...</option>
+                <option value='1'>First</option>
+                <option value='2'>Second</option>
+                <option value='3'>Third</option>
+                <option value='4'>Fourth</option>
+                <option value='5'>Fifth</option>
+            </select>
+            <div class='well'>
+                <ul class='options'>
+                    <li class='option'>
+                        <label>
+                            <input class='option-radio' name='example' type='radio' />
+                            <span class='label'> </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleFancySelect6 div').simplicityFancySelect({
+                  select: '#exampleFancySelect6 select',
+                  template: '',
+                  radioStyle: true,
+                  checkableInputSelector: ':radio.option-radio'
+                });
+            });
+        </script>
+    </div>
+</div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+            <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top</a>
+        </p>
+        <p>
+          Designed and built by the good folks at <a href="http://transparensee.com">Transparensee Systems</a>.
+        </p>
+      </div>
+    </footer>
+    <!--[if IE]>
+      <script src="//cdn.transparensee.com/lib/xdr/984c41/xdr.min.js"></script>
+      <script src="//cdn.transparensee.com/lib/json2/2010-11-17/json2.min.js"></script>
+      <script src="//cdn.transparensee.com/lib/jquery-plugin/bgiframe/2.1.2/jquery.bgiframe.min.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+    <script src="//cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="//cdn.transparensee.com/lib/jquery-plugin/bbq/1.2.1/jquery.ba-bbq.min.js"></script>
+    <script src="//cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.js"></script>
+    <script src="//cdn.transparensee.com/simplicity/3.2/simplicity.min.js"></script>
+    <script src="/js/documentation.js"></script>
+  </body>
+</html>
