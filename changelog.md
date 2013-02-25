@@ -74,7 +74,37 @@ Compatibility
   * $.simplicityHaversineDistanceRadians
   * $.simplicityHaversineDistanceMiles
   * $.simplicityHaversineDistanceKm
+* Replaces the `markerType` option of `$.simplicityGoogleMapResults` with
+  `markerCallback`.
+* Changes the default Google Maps marker back to the standard `google.maps.Marker`
+  instead of using the custom `$.simplicityGoogleMarker` class.
+  You can now control this by overriding the `markerCallback` option of
+  `$.simplicityGoogleMarker`. To switch over to the `$.simplicityGoogleMarker`
+  you'd write:
+{% highlight javascript %}
+$('#example').simplicityGoogleMapResults({
+    markerCallback; $.simplicityGoogleMarker.resultsCallback
+});
+{% endhighlight %}
 
+Improvements
+------------
+
+* Simplified directory layout and build system. The main project layout is now
+  less deep, with the actual JS and CSS files in top level `js` and `css`
+  directories.
+* Removal of server-side components. The project now uses CORS to communicate with
+  the engine directly removing the need for the example PHP components.
+* Support for developing from a `file://` URL. You no longer need to serve the
+  `docroot` directory via Apache or IIS, instead you can just open up the `index.html`
+  file directly and develop more easily.
+* Changes build system to use [maven](http://maven.apache.org) and
+  [wro4j](http://code.google.com/p/wro4j/) instead of a custom
+  [ant](http://ant.apache.org) and [media-compressor](https://github.com/t11e/media_compressor/)
+  pipeline. The build command is now `mvn clean package` instead of `ant clean dist`.
+* `simplicityGoogleMapResults` goes back to using the standard `google.maps.Marker`
+  marker. This makes it a more simple extension of Google Maps and easier to
+  extend.
 
 <div class="page-header">
   <h1>3.2 <small>2012-10-15</small></h1>
