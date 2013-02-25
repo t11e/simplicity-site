@@ -88,6 +88,10 @@ $('#example').simplicityGoogleMapResults({
 {% endhighlight %}
 * Removes the developer-only `$.simplicityDebug` widget. The search response is still
   fully available from `$('body').simplicityDiscoverySearch('searchResponse')`.
+* The `simplicity{vendor}MapShapeCreator` and `simplcityGoogleMarker` widgets are no longer
+  part of simplicity core. They have been migrated to be a standalone plugin which you
+  can obtain from
+  [http://github.com/t11e/simplicity-map-shape-creator](http://github.com/t11e/simplicity-map-shape-creator).
 
 Improvements
 ------------
