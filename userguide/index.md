@@ -33,17 +33,17 @@ You need to add `link` and `script` tags for the JavaScript and CSS resources fo
 
 Add the CSS references to the `head` of the page.
 {% highlight html %}
-<link href="//ajax.googleapis.com/ajax/libs/jqueryui/{{site.jQueryUiRelease}}/themes/{{site.jQueryUiTheme}}/jquery-ui.css" rel="stylesheet">
-<link href="//cdn.transparensee.com/simplicity/{{site.simplicityRelease}}/simplicity.min.css" rel="stylesheet">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/{{site.jQueryUiRelease}}/themes/{{site.jQueryUiTheme}}/jquery-ui.css" rel="stylesheet">
+<link href="http://cdn.transparensee.com/simplicity/{{site.simplicityRelease}}/simplicity.min.css" rel="stylesheet">
 {% endhighlight %}
 
 Note: You can use any of the available [jQuery UI themes](http://jqueryui.com/themeroller/).
 
 Add these external JavaScript references to the end of the `body` of the page.
 {% highlight html %}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/{{site.jQueryRelease}}/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/{{site.jQueryUiRelease}}/jquery-ui.min.js"></script>
-<script src="//cdn.transparensee.com/simplicity/{{site.simplicityRelease}}/simplicity.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/{{site.jQueryRelease}}/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/{{site.jQueryUiRelease}}/jquery-ui.min.js"></script>
+<script src="http://cdn.transparensee.com/simplicity/{{site.simplicityRelease}}/simplicity.min.js"></script>
 {% endhighlight %}
 
 Some older browsers need extra JavaScript support to function well, you'll need to add `script` tags for
