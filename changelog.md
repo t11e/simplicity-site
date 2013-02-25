@@ -86,6 +86,8 @@ $('#example').simplicityGoogleMapResults({
     markerCallback; $.simplicityGoogleMarker.resultsCallback
 });
 {% endhighlight %}
+* Removes the developer-only `$.simplicityDebug` widget. The search response is still
+  fully available from `$('body').simplicityDiscoverySearch('searchResponse')`.
 
 Improvements
 ------------
