@@ -120,4 +120,4 @@ JavaScript so that the widgets can be fully functional and displayed before the 
 
 We've demonstrated how to build a basic search page that use an external PHP backed search controller accessed via AJAX CORS requests.
 
-<a href="/userguide/example/gettingstarted.html" class="btn btn-primary button-large">View Example</a>
+<a href="{{site.url}}/userguide/example/gettingstarted.html" class="btn btn-primary button-large">View Example</a>
