@@ -1,0 +1,32 @@
+#!/bin/sh
+set -e
+
+# Builds the site and commits it to gh-pages, you are responsible
+# for checking the commit and pushing upstream.
+
+SHA="$(git rev-parse HEAD)"
+PROJECT_DIR="$(pwd)"
+
+TMP_DIR="/tmp/simplicity-site-$$"
+echo >&2 "Staging site at $TMP_DIR"
+mkdir "$TMP_DIR"
+
+cd "$TMP_DIR"
+git init
+git pull "$PROJECT_DIR" gh-pages
+
+echo "Building and copying site"
+cd "$PROJECT_DIR"
+ant clean site
+rm -rf "$TMP_DIR"/*
+cp -r _site/* "$TMP_DIR/"
+
+echo "Committing built site"
+cd "$TMP_DIR"
+git add --all .
+git commit
+
+echo "Pushing site to local simplicity-site repo"
+git push "$PROJECT_DIR" master:gh-pages
+cd "$PROJECT_DIR"
+rm -rf "$TMP_DIR"

@@ -1,0 +1,5 @@
+.DS_Store
+.rbenv-gemsets
+.rbenv-version
+/_site/
+

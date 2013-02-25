@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Simplicity Site" default="documentation">
+  <target name="clean"
+    description="Removes any temporary files or built resources.">
+    <delete dir="_site"/>
+  </target>
+
+  <target name="site"
+    description="Builds the site.">
+    <exec executable="jekyll" dir="." failonerror="true">
+      <arg value="--no-server"/>
+    </exec>
+    <echo message="Built site now available at _site/index.html"/>
+  </target>
+
+  <target name="jsdoc"
+    description="Builds the JavaScript documentation from ../simplicity.">
+    <delete dir="jsdoc"/>
+    <mkdir dir="jsdoc"/>
+    <java jar="_tools/jsdoc-toolkit-2.4.0/jsrun.jar" fork="true" failonerror="true">
+      <arg value="_tools/jsdoc-toolkit-2.4.0/app/run.js"/>
+      <arg value="-e=UTF-8"/>
+      <arg value="-d=jsdoc/"/>
+      <arg value="-t=_tools/jsdoc-toolkit-2.4.0/templates/jekyll"/>
+      <arg value="--private"/>
+      <arg value="../simplicity/js/"/>
+    </java>
+  </target>
+</project>
