@@ -46,7 +46,19 @@ Add these external JavaScript references to the end of the `body` of the page.
 <script src="http://cdn.transparensee.com/simplicity/{{site.simplicityRelease}}/simplicity.min.js"></script>
 {% endhighlight %}
 
-Some older browsers need extra JavaScript support to function well, you'll need to add `script` tags for
+Some widgets have extra dependencies, you'll need to add `script` tags for them.
+
+<dl>
+    <dt><a href="http://benalman.com/projects/jquery-bbq-plugin/">jQuery BBQ plugin</a></dt>
+    <dd>
+        Used by <code>$.simplicityDiscoverySearch('mergeQueryParams')</code> and <code>$.simplicityHistory</code>.
+{% highlight html %}
+<script src="http://cdn.transparensee.com/lib/jquery-plugin/bbq/1.2.1/jquery.ba-bbq.min.js"></script>
+{% endhighlight %}
+    </dd>
+</dl>
+
+Some browsers need extra JavaScript support to function well, you'll need to add `script` tags for
 the following libraries for most compatibility.
 
 <dl>
@@ -54,16 +66,48 @@ the following libraries for most compatibility.
     <dd>
         Gracefully adds support for <code>JSON.parse</code> and <code>JSON.stringify</code>
         to browsers that do not have native <code>JSON</code> support.
+{% highlight html %}
+<!--[if lt IE 9]>
+  <script src="http://cdn.transparensee.com/lib/json2/2010-11-17/json2.min.js"></script>
+<![endif]-->
+{% endhighlight %}
     </dd>
     <dt><a href="http://brandonaaron.net/code/bgiframe/docs">jQuery bgiframe plugin</a></dt>
-    <dd>Recommended for IE6 compatibilty when using <code>$.simplicityFlyout</code>.</dd>
-</dl>
+    <dd>
+        Recommended for IE6 compatibility when using <code>$.simplicityFlyout</code>.
+{% highlight html %}
+<!--[if IE]>
+  <script src="http://cdn.transparensee.com/lib/jquery-plugin/bgiframe/2.1.2/jquery.bgiframe.min.js"></script>
+<![endif]-->
+{% endhighlight %}
+    </dd>
+    <dt><a href="http://html5shim.googlecode.com">html5shim</a></dt>
+    <dd>
+        Adds HTML5 element support to IE. This script tag <em>must</em> go
+        in the <code>head</code> section of your page.
+{% highlight html %}
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{% endhighlight %}
 
-Some widgets have extra dependencies, you'll need to add `script` tags for them too.
-
-<dl>
-    <dt><a href="http://benalman.com/projects/jquery-bbq-plugin/">jQuery BBQ plugin</a></dt>
-    <dd>Used by <code>$.simplicityDiscoverySearch('mergeQueryParams')</code> and <code>$.simplicityHistory</code>.</dd>
+    </dd>
+    <dt><a href="https://gist.github.com/thej/4082821">xdr.js</a></dt>
+    <dd>
+        Adds support for CORS requests to older versions of IE.
+{% highlight html %}
+<!--[if IE]>
+  <script src="http://cdn.transparensee.com/lib/xdr/984c41/xdr.min.js"></script>
+<![endif]-->
+{% endhighlight %}
+    </dd>
+    <dt><a href="http://touchpunch.furf.com">jQuery Touch Punch plugin</a></dt>
+    <dd>
+        Adds tablet/phone touch event support to jQuery UI.
+{% highlight html %}
+<script src="http://cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+{% endhighlight %}
+    </dd>
 </dl>
 
 You will add javascript code after the above tags to instantiate and configure the widgets that you want to use. We'll get to that
