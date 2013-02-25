@@ -141,20 +141,82 @@
 <span class='nt'>&lt;script </span><span class='na'>src=</span><span class='s'>&quot;http://cdn.transparensee.com/simplicity/3.2/simplicity.min.js&quot;</span><span class='nt'>&gt;&lt;/script&gt;</span>
 </code></pre>
 </div>
-<p>Some older browsers need extra JavaScript support to function well, you&#8217;ll need to add <code>script</code> tags for the following libraries for most compatibility.</p>
+<p>Some widgets have extra dependencies, you&#8217;ll need to add <code>script</code> tags for them.</p>
+<dl>
+    <dt><a href='http://benalman.com/projects/jquery-bbq-plugin/'>jQuery BBQ plugin</a></dt>
+    <dd>
+        Used by <code>$.simplicityDiscoverySearch('mergeQueryParams')</code> and <code>$.simplicityHistory</code>.
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;script </span><span class='na'>src=</span><span class='s'>&quot;http://cdn.transparensee.com/lib/jquery-plugin/bbq/1.2.1/jquery.ba-bbq.min.js&quot;</span><span class='nt'>&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+
+    </dd>
+</dl>
+<p>Some browsers need extra JavaScript support to function well, you&#8217;ll need to add <code>script</code> tags for the following libraries for most compatibility.</p>
 <dl>
     <dt><a href='https://github.com/douglascrockford/JSON-js'>JSON2</a></dt>
     <dd>
         Gracefully adds support for <code>JSON.parse</code> and <code>JSON.stringify</code>
         to browsers that do not have native <code>JSON</code> support.
+
+<div class='highlight'><pre><code class='html'><span class='c'>&lt;!--[if lt IE 9]&gt;</span>
+<span class='c'>  &lt;script src=&quot;http://cdn.transparensee.com/lib/json2/2010-11-17/json2.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class='c'>&lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+
+
     </dd>
     <dt><a href='http://brandonaaron.net/code/bgiframe/docs'>jQuery bgiframe plugin</a></dt>
-    <dd>Recommended for IE6 compatibilty when using <code>$.simplicityFlyout</code>.</dd>
-</dl>
-<p>Some widgets have extra dependencies, you&#8217;ll need to add <code>script</code> tags for them too.</p>
-<dl>
-    <dt><a href='http://benalman.com/projects/jquery-bbq-plugin/'>jQuery BBQ plugin</a></dt>
-    <dd>Used by <code>$.simplicityDiscoverySearch('mergeQueryParams')</code> and <code>$.simplicityHistory</code>.</dd>
+    <dd>
+        Recommended for IE6 compatibility when using <code>$.simplicityFlyout</code>.
+
+<div class='highlight'><pre><code class='html'><span class='c'>&lt;!--[if IE]&gt;</span>
+<span class='c'>  &lt;script src=&quot;http://cdn.transparensee.com/lib/jquery-plugin/bgiframe/2.1.2/jquery.bgiframe.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class='c'>&lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+
+
+    </dd>
+    <dt><a href='http://html5shim.googlecode.com'>html5shim</a></dt>
+    <dd>
+        Adds HTML5 element support to IE. This script tag <em>must</em> go
+        in the <code>head</code> section of your page.
+
+<div class='highlight'><pre><code class='html'><span class='c'>&lt;!--[if lt IE 9]&gt;</span>
+<span class='c'>  &lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;</span>
+<span class='c'>&lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+
+
+
+    </dd>
+    <dt><a href='https://gist.github.com/thej/4082821'>xdr.js</a></dt>
+    <dd>
+        Adds support for CORS requests to older versions of IE.
+
+<div class='highlight'><pre><code class='html'><span class='c'>&lt;!--[if IE]&gt;</span>
+<span class='c'>  &lt;script src=&quot;http://cdn.transparensee.com/lib/xdr/984c41/xdr.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class='c'>&lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+
+
+    </dd>
+    <dt><a href='http://touchpunch.furf.com'>jQuery Touch Punch plugin</a></dt>
+    <dd>
+        Adds tablet/phone touch event support to jQuery UI.
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;script </span><span class='na'>src=</span><span class='s'>&quot;http://cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js&quot;</span><span class='nt'>&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+
+    </dd>
 </dl>
 <p>You will add javascript code after the above tags to instantiate and configure the widgets that you want to use. We&#8217;ll get to that in a bit.</p>
 <div class='page-header'>
@@ -264,9 +326,11 @@
         </p>
       </div>
     </footer>
+    <!--[if lt IE 9]>
+      <script src="http://cdn.transparensee.com/lib/json2/2010-11-17/json2.min.js"></script>
+    <![endif]-->
     <!--[if IE]>
       <script src="http://cdn.transparensee.com/lib/xdr/984c41/xdr.min.js"></script>
-      <script src="http://cdn.transparensee.com/lib/json2/2010-11-17/json2.min.js"></script>
       <script src="http://cdn.transparensee.com/lib/jquery-plugin/bgiframe/2.1.2/jquery.bgiframe.min.js"></script>
     <![endif]-->
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
