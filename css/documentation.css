@@ -28,31 +28,7 @@ footer.footer {
     color: #999;
 }
 
-.ui-simplicity-fancy-select span.label,
-.ui-simplicity-fancy-select a.label,
-.ui-simplicity-slider span.label {
-    padding: inherit;
-    -webkit-border-radius: inherit;
-    -moz-border-radius: inherit;
-    border-radius: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    color: inherit;
-    text-shadow: inherit;
-    white-space: inherit;
-    vertical-align: inherit;
-    background-color: inherit;
-}
-
-.ui-simplicity-slider .tooltip {
-  z-index: inherit;
-  font-size: inherit;
-  opacity: inherit;
-  filter: inherit;
-  visibility: inherit;
-}
-.ui-simplicity-fancy-select span.label {
+span.ui-simplicity-fancy-select-label {
     padding-left: 0.5em;
 }
 

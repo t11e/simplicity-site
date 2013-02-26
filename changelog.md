@@ -68,6 +68,114 @@ Compatibility
     </tr>
   </tbody>
 </table>
+* `$.simplicitySelectSlider` uses the new `.ui-simplicity-select-slider`
+  instead of (and currently identical to) the deprecated
+  `.ui-simplicity-slider` to avoid possible conflicts with
+  `$.simplicitySlider`.
+* CSS classes that Simplicity uses have been renamed if they do not start with
+  `ui-simplicity`. The full list of renamed classes is as follows:
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>old</th>
+      <th>new</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>path-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-path-container</code></td>
+    </tr>
+    <tr>
+      <td><code>selected-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-selected-container</code></td>
+    </tr>
+    <tr>
+      <td><code>available-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-available-container</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-container</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-flyout</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-flyout</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-opener</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-opener</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-closer</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-closer</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-contains-selected</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-contains-selected</code></td>
+    </tr>
+    <tr>
+      <td><code>options</code></td>
+      <td><code>ui-simplicity-fancy-select-options</code></td>
+    </tr>
+    <tr>
+      <td><code>option</code></td>
+      <td><code>ui-simplicity-fancy-select-option</code></td>
+    </tr>
+    <tr>
+      <td><code>option-checkbox</code></td>
+      <td><code>ui-simplicity-fancy-select-option-checkbox</code></td>
+    </tr>
+    <tr>
+      <td><code>option-radio</code></td>
+      <td><code>ui-simplicity-fancy-select-option-radio</code></td>
+    </tr>
+    <tr>
+      <td><code>count</code></td>
+      <td><code>ui-simplicity-fancy-select-count</code></td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td><code>ui-simplicity-fancy-select-label</code>, <code>ui-simplicity-select-slider-label</code>, <code>ui-simplicity-slider-label</code></td>
+    </tr>
+    <tr>
+      <td><code>tick</code></td>
+      <td><code>ui-simplicity-select-slider-tick</code>, <code>ui-simplicity-slider-tick</code></td>
+    </tr>
+    <tr>
+      <td><code>position</code></td>
+      <td><code>ui-simplicity-select-slider-position</code></td>
+    </tr>
+    <tr>
+      <td><code>scale</code></td>
+      <td><code>ui-simplicity-select-slider-scale</code>, <code>ui-simplicity-slider-scale</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip</code>, <code>ui-simplicity-slider-tooltip</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-content</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-content</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-pointer-down</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down</code>, <code>ui-simplicity-slider-tooltip-pointer-down</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-pointer-down-inner</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down-inner</code>, <code>ui-simplicity-slider-tooltip-pointer-down-inner</code></td>
+    </tr>
+    <tr>
+      <td><code>first</code></td>
+      <td><code>ui-simplicity-select-slider-first-tick</code></td>
+    </tr>
+    <tr>
+      <td><code>last</code></td>
+      <td><code>ui-simplicity-select-slider-last-tick</code></td>
+    </tr>
+  </tbody>
+</table>
 * Removes backwards compatible shims for the following methods:
   * $.simplicityHaversineRadiusMiles
   * $.simplicityHaversineRadiusKm
