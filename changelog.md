@@ -68,6 +68,113 @@ Compatibility
     </tr>
   </tbody>
 </table>
+* `$.simplicitySelectSlider` uses the new `.ui-simplicity-select-slider`
+  css class instead of `.ui-simplicity-slider` to avoid possible conflicts with
+  `$.simplicitySlider`.
+* CSS classes that Simplicity uses have been renamed if they do not start with
+  `ui-simplicity`. The full list of renamed classes is as follows:
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>old</th>
+      <th>new</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>path-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-path-container</code></td>
+    </tr>
+    <tr>
+      <td><code>selected-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-selected-container</code></td>
+    </tr>
+    <tr>
+      <td><code>available-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-available-container</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-container</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-flyout</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-flyout</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-opener</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-opener</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-closer</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-closer</code></td>
+    </tr>
+    <tr>
+      <td><code>overflow-contains-selected</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-contains-selected</code></td>
+    </tr>
+    <tr>
+      <td><code>options</code></td>
+      <td><code>ui-simplicity-fancy-select-options</code></td>
+    </tr>
+    <tr>
+      <td><code>option</code></td>
+      <td><code>ui-simplicity-fancy-select-option</code></td>
+    </tr>
+    <tr>
+      <td><code>option-checkbox</code></td>
+      <td><code>ui-simplicity-fancy-select-checkbox</code></td>
+    </tr>
+    <tr>
+      <td><code>option-radio</code></td>
+      <td><code>ui-simplicity-fancy-select-radio</code></td>
+    </tr>
+    <tr>
+      <td><code>count</code></td>
+      <td><code>ui-simplicity-fancy-select-count</code></td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td><code>ui-simplicity-fancy-select-label</code> or <code>ui-simplicity-select-slider-label</code></td>
+    </tr>
+    <tr>
+      <td><code>tick</code></td>
+      <td><code>ui-simplicity-select-slider-tick</code></td>
+    </tr>
+    <tr>
+      <td><code>position</code></td>
+      <td><code>ui-simplicity-select-slider-position</code></td>
+    </tr>
+    <tr>
+      <td><code>first</code></td>
+      <td><code>ui-simplicity-select-slider-position-first</code></td>
+    </tr>
+    <tr>
+      <td><code>last</code></td>
+      <td><code>ui-simplicity-select-slider-position-last</code></td>
+    </tr>
+    <tr>
+      <td><code>scale</code></td>
+      <td><code>ui-simplicity-select-slider-scale</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-content</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-content</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-pointer-down</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-pointer-down-inner</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down-inner</code></td>
+    </tr>
+  </tbody>
+</table>
 * Removes backwards compatible shims for the following methods:
   * $.simplicityHaversineRadiusMiles
   * $.simplicityHaversineRadiusKm
@@ -114,6 +221,8 @@ Improvements
 * Adds support for dual-handled sliders to `$.ui.simplicitySelectSlider`. See the
   [userguide page](http://simplicitywidgets.org/userguide/simplicitySelectSlider.html)
   for more details.
+* All CSS classes now have a widget specific prefix. This prevents conflicts between some
+  of the more generic classes and other custom CSS.
 
 <div class="page-header">
   <h1>3.2 <small>2012-10-15</small></h1>
