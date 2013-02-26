@@ -109,7 +109,7 @@ $('#example div').simplicityFancySelect({
 {% highlight javascript %}
 $('#example div').simplicityFancySelect({
     select: '#example select',
-    template: '<ul class="options"><li class="option"><a href="#" class="label"/></li></ul>'
+    template: '<ul class="ui-simplicity-options"><li class="ui-simplicity-option"><a href="#" class="ui-simplicity-label"/></li></ul>'
 });
 {% endhighlight %}
     </div>
@@ -128,7 +128,7 @@ $('#example div').simplicityFancySelect({
             $(function () {
                 $('#exampleFancySelect2 div').simplicityFancySelect({
                   select: '#exampleFancySelect2 select',
-                  template: "<ul class='options'><li class='option'><a href='#' class='label'/></li></ul>"
+                  template: "<ul class='ui-simplicity-options'><li class='ui-simplicity-option'><a href='#' class='ui-simplicity-label'/></li></ul>"
                 });
             });
         </script>
@@ -153,8 +153,8 @@ $('#example div').simplicityFancySelect({
         <option value="3">Third</option>
     </select>
     <div>
-        <ul class="options">
-            <li class="option"><a href="#" class="label"></a></li>
+        <ul class="ui-simplicity-options">
+            <li class="ui-simplicity-option"><a href="#" class="ui-simplicity-label"></a></li>
         </ul>
     </div>
 </div>
@@ -181,8 +181,8 @@ $('#example div').simplicityFancySelect({
                 <option value="3">Third</option>
             </select>
             <div class="well">
-                <ul class="options">
-                    <li class="option"><a href="#" class="label"> </a></li>
+                <ul class="ui-simplicity-options">
+                    <li class="ui-simplicity-option"><a href="#" class="ui-simplicity-label"> </a></li>
                 </ul>
             </div>
         </div>
@@ -217,8 +217,8 @@ $('#example div').simplicityFancySelect({
         <option value="5">Fifth</option>
     </select>
     <div>
-        <ul class="options">
-            <li class="option"><a href="#" class="label"></a></li>
+        <ul class="ui-simplicity-options">
+            <li class="ui-simplicity-option"><a href="#" class="ui-simplicity-label"></a></li>
         </ul>
     </div>
 </div>
@@ -244,8 +244,8 @@ $('#example div').simplicityFancySelect({
             </select>
             <label><span class="badge">2</span> fancy select</label>
             <div class="well">
-                <ul class="options">
-                    <li class="option"><a href="#" class="label"> </a></li>
+                <ul class="ui-simplicity-options">
+                    <li class="ui-simplicity-option"><a href="#" class="ui-simplicity-label"> </a></li>
                 </ul>
             </div>
         </div>
@@ -288,11 +288,11 @@ $('#example div').simplicityFancySelect({
         <option value="5">Fifth</option>
     </select>
     <div>
-        <ul class="options">
-            <li class="option">
+        <ul class="ui-simplicity-options">
+            <li class="ui-simplicity-option">
                 <label>
-                    <input type="checkbox" name="example" class="option-checkbox" />
-                    <span class="label"></span>
+                    <input type="checkbox" name="example" class="ui-simplicity-option-checkbox" />
+                    <span class="ui-simplicity-label"></span>
                 </label>
             </li>
         </ul>
@@ -318,11 +318,11 @@ $('#example div').simplicityFancySelect({
                 <option value="5">Fifth</option>
             </select>
             <div class="well">
-                <ul class="options">
-                    <li class="option">
+                <ul class="ui-simplicity-options">
+                    <li class="ui-simplicity-option">
                         <label>
-                            <input type="checkbox" name="example" class="option-checkbox" />
-                            <span class="label"> </span>
+                            <input type="checkbox" name="example" class="ui-simplicity-option-checkbox" />
+                            <span class="ui-simplicity-label"> </span>
                         </label>
                     </li>
                 </ul>
@@ -360,11 +360,11 @@ $('#example div').simplicityFancySelect({
         <option value="5">Fifth</option>
     </select>
     <div>
-        <ul class="options">
-            <li class="option">
+        <ul class="ui-simplicity-options">
+            <li class="ui-simplicity-option">
                 <label>
-                    <input type="radio" name="example" class="option-radio" />
-                    <span class="label"></span>
+                    <input type="radio" name="example" class="ui-simplicity-option-radio" />
+                    <span class="ui-simplicity-label"></span>
                 </label>
             </li>
         </ul>
@@ -377,7 +377,7 @@ $('#example div').simplicityFancySelect({
     select: '#example select',
     template: '',
     radioStyle: true,
-    checkableInputSelector: ':radio.option-radio'
+    checkableInputSelector: ':radio.ui-simplicity-option-radio'
 });
 {% endhighlight %}
     </div>
@@ -393,11 +393,11 @@ $('#example div').simplicityFancySelect({
                 <option value="5">Fifth</option>
             </select>
             <div class="well">
-                <ul class="options">
-                    <li class="option">
+                <ul class="ui-simplicity-options">
+                    <li class="ui-simplicity-option">
                         <label>
-                            <input type="radio" name="example" class="option-radio" />
-                            <span class="label"> </span>
+                            <input type="radio" name="example" class="ui-simplicity-option-radio" />
+                            <span class="ui-simplicity-label"> </span>
                         </label>
                     </li>
                 </ul>
@@ -409,7 +409,7 @@ $('#example div').simplicityFancySelect({
                   select: '#exampleFancySelect6 select',
                   template: '',
                   radioStyle: true,
-                  checkableInputSelector: ':radio.option-radio'
+                  checkableInputSelector: ':radio.ui-simplicity-option-radio'
                 });
             });
         </script>
