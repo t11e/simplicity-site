@@ -69,8 +69,7 @@ Compatibility
   </tbody>
 </table>
 * `$.simplicitySelectSlider` uses the new `.ui-simplicity-select-slider`
-  instead of (and currently identical to) the deprecated
-  `.ui-simplicity-slider` to avoid possible conflicts with
+  css class instead of `.ui-simplicity-slider` to avoid possible conflicts with
   `$.simplicitySlider`.
 * CSS classes that Simplicity uses have been renamed if they do not start with
   `ui-simplicity`. The full list of renamed classes is as follows:
@@ -84,95 +83,95 @@ Compatibility
   <tbody>
     <tr>
       <td><code>path-container</code></td>
-      <td><code>ui-simplicity-path-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-path-container</code></td>
     </tr>
     <tr>
       <td><code>selected-container</code></td>
-      <td><code>ui-simplicity-selected-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-selected-container</code></td>
     </tr>
     <tr>
       <td><code>available-container</code></td>
-      <td><code>ui-simplicity-available-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-available-container</code></td>
     </tr>
     <tr>
       <td><code>overflow-container</code></td>
-      <td><code>ui-simplicity-overflow-container</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-container</code></td>
     </tr>
     <tr>
       <td><code>overflow-flyout</code></td>
-      <td><code>ui-simplicity-overflow-flyout</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-flyout</code></td>
     </tr>
     <tr>
       <td><code>overflow-opener</code></td>
-      <td><code>ui-simplicity-overflow-opener</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-opener</code></td>
     </tr>
     <tr>
       <td><code>overflow-closer</code></td>
-      <td><code>ui-simplicity-overflow-closer</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-closer</code></td>
     </tr>
     <tr>
       <td><code>overflow-contains-selected</code></td>
-      <td><code>ui-simplicity-overflow-contains-selected</code></td>
+      <td><code>ui-simplicity-fancy-facets-overflow-contains-selected</code></td>
     </tr>
     <tr>
       <td><code>options</code></td>
-      <td><code>ui-simplicity-options</code></td>
+      <td><code>ui-simplicity-fancy-select-options</code></td>
     </tr>
     <tr>
       <td><code>option</code></td>
-      <td><code>ui-simplicity-option</code></td>
+      <td><code>ui-simplicity-fancy-select-option</code></td>
     </tr>
     <tr>
       <td><code>option-checkbox</code></td>
-      <td><code>ui-simplicity-option-checkbox</code></td>
+      <td><code>ui-simplicity-fancy-select-checkbox</code></td>
     </tr>
     <tr>
       <td><code>option-radio</code></td>
-      <td><code>ui-simplicity-option-radio</code></td>
+      <td><code>ui-simplicity--fancy-select-radio</code></td>
     </tr>
     <tr>
       <td><code>count</code></td>
-      <td><code>ui-simplicity-count</code></td>
+      <td><code>ui-simplicity-fancy-select-count</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
-      <td><code>ui-simplicity-label</code></td>
+      <td><code>ui-simplicity-fancy-select-label</code> or <code>ui-simplicity-select-slider-label</code></td>
     </tr>
     <tr>
       <td><code>tick</code></td>
-      <td><code>ui-simplicity-tick</code></td>
+      <td><code>ui-simplicity-select-slider-tick</code></td>
     </tr>
     <tr>
       <td><code>position</code></td>
-      <td><code>ui-simplicity-position</code></td>
-    </tr>
-    <tr>
-      <td><code>scale</code></td>
-      <td><code>ui-simplicity-scale</code></td>
-    </tr>
-    <tr>
-      <td><code>tooltip</code></td>
-      <td><code>ui-simplicity-tooltip</code></td>
-    </tr>
-    <tr>
-      <td><code>tooltip-content</code></td>
-      <td><code>ui-simplicity-tooltip-content</code></td>
-    </tr>
-    <tr>
-      <td><code>tooltip-pointer-down</code></td>
-      <td><code>ui-simplicity-tooltip-pointer-down</code></td>
-    </tr>
-    <tr>
-      <td><code>tooltip-pointer-down-inner</code></td>
-      <td><code>ui-simplicity-tooltip-pointer-down-inner</code></td>
+      <td><code>ui-simplicity-select-slider-position</code></td>
     </tr>
     <tr>
       <td><code>first</code></td>
-      <td><code>ui-simplicity-first</code></td>
+      <td><code>ui-simplicity-select-slider-position-first</code></td>
     </tr>
     <tr>
       <td><code>last</code></td>
-      <td><code>ui-simplicity-last</code></td>
+      <td><code>ui-simplicity-select-slider-position-last</code></td>
+    </tr>
+    <tr>
+      <td><code>scale</code></td>
+      <td><code>ui-simplicity-select-slider-scale</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-content</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-content</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-pointer-down</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip-pointer-down-inner</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down-inner</code></td>
     </tr>
   </tbody>
 </table>
