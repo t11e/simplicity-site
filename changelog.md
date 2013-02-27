@@ -111,6 +111,9 @@ Improvements
 * `simplicityGoogleMapResults` goes back to using the standard `google.maps.Marker`
   marker. This makes it a more simple extension of Google Maps and easier to
   extend.
+* Adds support for dual-handled sliders to `$.ui.simplicitySelectSlider`. See the
+  [userguide page](http://simplicitywidgets.org/userguide/simplicitySelectSlider.html)
+  for more details.
 
 <div class="page-header">
   <h1>3.2 <small>2012-10-15</small></h1>
