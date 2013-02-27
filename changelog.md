@@ -69,8 +69,7 @@ Compatibility
   </tbody>
 </table>
 * `$.simplicitySelectSlider` uses the new `.ui-simplicity-select-slider`
-  instead of (and currently identical to) the deprecated
-  `.ui-simplicity-slider` to avoid possible conflicts with
+  css class instead of `.ui-simplicity-slider` to avoid possible conflicts with
   `$.simplicitySlider`.
 * CSS classes that Simplicity uses have been renamed if they do not start with
   `ui-simplicity`. The full list of renamed classes is as follows:
@@ -124,11 +123,11 @@ Compatibility
     </tr>
     <tr>
       <td><code>option-checkbox</code></td>
-      <td><code>ui-simplicity-fancy-select-option-checkbox</code></td>
+      <td><code>ui-simplicity-fancy-select-checkbox</code></td>
     </tr>
     <tr>
       <td><code>option-radio</code></td>
-      <td><code>ui-simplicity-fancy-select-option-radio</code></td>
+      <td><code>ui-simplicity-fancy-select-radio</code></td>
     </tr>
     <tr>
       <td><code>count</code></td>
@@ -136,23 +135,31 @@ Compatibility
     </tr>
     <tr>
       <td><code>label</code></td>
-      <td><code>ui-simplicity-fancy-select-label</code>, <code>ui-simplicity-select-slider-label</code>, <code>ui-simplicity-slider-label</code></td>
+      <td><code>ui-simplicity-fancy-select-label</code> or <code>ui-simplicity-select-slider-label</code></td>
     </tr>
     <tr>
       <td><code>tick</code></td>
-      <td><code>ui-simplicity-select-slider-tick</code>, <code>ui-simplicity-slider-tick</code></td>
+      <td><code>ui-simplicity-select-slider-tick</code></td>
     </tr>
     <tr>
       <td><code>position</code></td>
       <td><code>ui-simplicity-select-slider-position</code></td>
     </tr>
     <tr>
+      <td><code>first</code></td>
+      <td><code>ui-simplicity-select-slider-position-first</code></td>
+    </tr>
+    <tr>
+      <td><code>last</code></td>
+      <td><code>ui-simplicity-select-slider-position-last</code></td>
+    </tr>
+    <tr>
       <td><code>scale</code></td>
-      <td><code>ui-simplicity-select-slider-scale</code>, <code>ui-simplicity-slider-scale</code></td>
+      <td><code>ui-simplicity-select-slider-scale</code></td>
     </tr>
     <tr>
       <td><code>tooltip</code></td>
-      <td><code>ui-simplicity-select-slider-tooltip</code>, <code>ui-simplicity-slider-tooltip</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip</code></td>
     </tr>
     <tr>
       <td><code>tooltip-content</code></td>
@@ -160,19 +167,11 @@ Compatibility
     </tr>
     <tr>
       <td><code>tooltip-pointer-down</code></td>
-      <td><code>ui-simplicity-select-slider-tooltip-pointer-down</code>, <code>ui-simplicity-slider-tooltip-pointer-down</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down</code></td>
     </tr>
     <tr>
       <td><code>tooltip-pointer-down-inner</code></td>
-      <td><code>ui-simplicity-select-slider-tooltip-pointer-down-inner</code>, <code>ui-simplicity-slider-tooltip-pointer-down-inner</code></td>
-    </tr>
-    <tr>
-      <td><code>first</code></td>
-      <td><code>ui-simplicity-select-slider-first-tick</code></td>
-    </tr>
-    <tr>
-      <td><code>last</code></td>
-      <td><code>ui-simplicity-select-slider-last-tick</code></td>
+      <td><code>ui-simplicity-select-slider-tooltip-pointer-down-inner</code></td>
     </tr>
   </tbody>
 </table>
