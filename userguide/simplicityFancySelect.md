@@ -275,7 +275,7 @@ $('#example div').simplicityFancySelect({
     <div class="span8">
         <p>
             You can enable support for checkboxes by adding the
-            <code>option-checkbox</code> class to them.
+            <code>ui-simplicity-fancy-select-checkbox</code> class to them.
         </p>
         <h3>HTML</h3>
 {% highlight html %}
@@ -291,7 +291,7 @@ $('#example div').simplicityFancySelect({
         <ul class="ui-simplicity-fancy-select-options">
             <li class="ui-simplicity-fancy-select-option">
                 <label>
-                    <input type="checkbox" name="example" class="ui-simplicity-fancy-select-option-checkbox" />
+                    <input type="checkbox" name="example" class="ui-simplicity-fancy-select-checkbox" />
                     <span class="ui-simplicity-fancy-select-label"></span>
                 </label>
             </li>
@@ -321,7 +321,7 @@ $('#example div').simplicityFancySelect({
                 <ul class="ui-simplicity-fancy-select-options">
                     <li class="ui-simplicity-fancy-select-option">
                         <label>
-                            <input type="checkbox" name="example" class="ui-simplicity-fancy-select-option-checkbox" />
+                            <input type="checkbox" name="example" class="ui-simplicity-fancy-select-checkbox" />
                             <span class="ui-simplicity-fancy-select-label"> </span>
                         </label>
                     </li>
@@ -346,7 +346,7 @@ $('#example div').simplicityFancySelect({
     <div class="span8">
         <p>
             Radio buttons can also be used by using the <code>radioStyle</code>
-            and <code>checkableInputSelector</code> options.
+            option and <code>ui-simplicity-fancy-select-radio</code> css class.
         </p>
         <h3>HTML</h3>
 {% highlight html %}
@@ -363,7 +363,7 @@ $('#example div').simplicityFancySelect({
         <ul class="ui-simplicity-fancy-select-options">
             <li class="ui-simplicity-fancy-select-option">
                 <label>
-                    <input type="radio" name="example" class="ui-simplicity-fancy-select-option-radio" />
+                    <input type="radio" name="example" class="ui-simplicity-fancy-select-radio" />
                     <span class="ui-simplicity-fancy-select-label"></span>
                 </label>
             </li>
@@ -376,8 +376,7 @@ $('#example div').simplicityFancySelect({
 $('#example div').simplicityFancySelect({
     select: '#example select',
     template: '',
-    radioStyle: true,
-    checkableInputSelector: ':radio.ui-simplicity-fancy-select-option-radio'
+    radioStyle: true
 });
 {% endhighlight %}
     </div>
@@ -396,7 +395,7 @@ $('#example div').simplicityFancySelect({
                 <ul class="ui-simplicity-fancy-select-options">
                     <li class="ui-simplicity-fancy-select-option">
                         <label>
-                            <input type="radio" name="example" class="ui-simplicity-fancy-select-option-radio" />
+                            <input type="radio" name="example" class="ui-simplicity-fancy-select-radio" />
                             <span class="ui-simplicity-fancy-select-label"> </span>
                         </label>
                     </li>
@@ -408,8 +407,7 @@ $('#example div').simplicityFancySelect({
                 $('#exampleFancySelect6 div').simplicityFancySelect({
                   select: '#exampleFancySelect6 select',
                   template: '',
-                  radioStyle: true,
-                  checkableInputSelector: ':radio.ui-simplicity-fancy-select-option-radio'
+                  radioStyle: true
                 });
             });
         </script>
