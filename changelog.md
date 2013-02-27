@@ -221,6 +221,8 @@ Improvements
 * Adds support for dual-handled sliders to `$.ui.simplicitySelectSlider`. See the
   [userguide page](http://simplicitywidgets.org/userguide/simplicitySelectSlider.html)
   for more details.
+* All CSS classes now have a widget specific prefix. This prevents conflicts between some
+  of the more generic classes and other custom CSS.
 
 <div class="page-header">
   <h1>3.2 <small>2012-10-15</small></h1>
