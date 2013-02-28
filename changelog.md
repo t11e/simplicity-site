@@ -7,7 +7,7 @@ lead: What's new, doc?
 ---
 
 <div class="page-header">
-  <h1>3.3 <small>TBD</small></h1>
+  <h1>4.0 <small>2013-02-28</small></h1>
 </div>
 
 Compatibility
@@ -198,7 +198,7 @@ $('#example').simplicityGoogleMapResults({
 * The `simplicity{vendor}MapShapeCreator` and `simplcityGoogleMarker` widgets are no longer
   part of simplicity core. They have been migrated to be a standalone plugin which you
   can obtain from
-  [http://github.com/t11e/simplicity-map-shape-creator](http://github.com/t11e/simplicity-map-shape-creator).
+  [http://github.com/t11e/simplicity-plugin-map-shape-creator](http://github.com/t11e/simplicity-plugin-map-shape-creator).
 
 Improvements
 ------------

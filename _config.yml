@@ -2,7 +2,7 @@ exclude:
   - bin
   - tools
   - build.xml
-simplicityRelease: 3.2
+simplicityRelease: 4.0
 jQueryRelease: 1.9.1
 jQueryUiRelease: 1.10.0
 jQueryUiTheme: base
