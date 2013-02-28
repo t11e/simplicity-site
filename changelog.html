@@ -9,7 +9,7 @@
     <link href="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.css" rel="stylesheet">
     <link href="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet">
-    <link href="http://cdn.transparensee.com/simplicity/3.2/simplicity.min.css" rel="stylesheet">
+    <link href="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.css" rel="stylesheet">
     <link href="/css/syntax.css" rel="stylesheet">
     <link href="/css/documentation.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -62,7 +62,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <div class="container">
 <div class='page-header'>
-  <h1>3.3 <small>TBD</small></h1>
+  <h1>4.0 <small>2013-02-28</small></h1>
 </div>
 <h2 id='compatibility'>Compatibility</h2>
 
@@ -121,6 +121,115 @@
 </li>
 
 <li>
+<p><code>$.simplicitySelectSlider</code> uses the new <code>.ui-simplicity-select-slider</code> css class instead of <code>.ui-simplicity-slider</code> to avoid possible conflicts with <code>$.simplicitySlider</code>.</p>
+</li>
+
+<li>
+<p>CSS classes that Simplicity uses have been renamed if they do not start with <code>ui-simplicity</code>. The full list of renamed classes is as follows: <table class='table table-bordered table-striped'>
+<thead>
+  <tr>
+    <th>old</th>
+    <th>new</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><code>path-container</code></td>
+    <td><code>ui-simplicity-fancy-facets-path-container</code></td>
+  </tr>
+  <tr>
+    <td><code>selected-container</code></td>
+    <td><code>ui-simplicity-fancy-facets-selected-container</code></td>
+  </tr>
+  <tr>
+    <td><code>available-container</code></td>
+    <td><code>ui-simplicity-fancy-facets-available-container</code></td>
+  </tr>
+  <tr>
+    <td><code>overflow-container</code></td>
+    <td><code>ui-simplicity-fancy-facets-overflow-container</code></td>
+  </tr>
+  <tr>
+    <td><code>overflow-flyout</code></td>
+    <td><code>ui-simplicity-fancy-facets-overflow-flyout</code></td>
+  </tr>
+  <tr>
+    <td><code>overflow-opener</code></td>
+    <td><code>ui-simplicity-fancy-facets-overflow-opener</code></td>
+  </tr>
+  <tr>
+    <td><code>overflow-closer</code></td>
+    <td><code>ui-simplicity-fancy-facets-overflow-closer</code></td>
+  </tr>
+  <tr>
+    <td><code>overflow-contains-selected</code></td>
+    <td><code>ui-simplicity-fancy-facets-overflow-contains-selected</code></td>
+  </tr>
+  <tr>
+    <td><code>options</code></td>
+    <td><code>ui-simplicity-fancy-select-options</code></td>
+  </tr>
+  <tr>
+    <td><code>option</code></td>
+    <td><code>ui-simplicity-fancy-select-option</code></td>
+  </tr>
+  <tr>
+    <td><code>option-checkbox</code></td>
+    <td><code>ui-simplicity-fancy-select-checkbox</code></td>
+  </tr>
+  <tr>
+    <td><code>option-radio</code></td>
+    <td><code>ui-simplicity-fancy-select-radio</code></td>
+  </tr>
+  <tr>
+    <td><code>count</code></td>
+    <td><code>ui-simplicity-fancy-select-count</code></td>
+  </tr>
+  <tr>
+    <td><code>label</code></td>
+    <td><code>ui-simplicity-fancy-select-label</code> or <code>ui-simplicity-select-slider-label</code></td>
+  </tr>
+  <tr>
+    <td><code>tick</code></td>
+    <td><code>ui-simplicity-select-slider-tick</code></td>
+  </tr>
+  <tr>
+    <td><code>position</code></td>
+    <td><code>ui-simplicity-select-slider-position</code></td>
+  </tr>
+  <tr>
+    <td><code>first</code></td>
+    <td><code>ui-simplicity-select-slider-position-first</code></td>
+  </tr>
+  <tr>
+    <td><code>last</code></td>
+    <td><code>ui-simplicity-select-slider-position-last</code></td>
+  </tr>
+  <tr>
+    <td><code>scale</code></td>
+    <td><code>ui-simplicity-select-slider-scale</code></td>
+  </tr>
+  <tr>
+    <td><code>tooltip</code></td>
+    <td><code>ui-simplicity-select-slider-tooltip</code></td>
+  </tr>
+  <tr>
+    <td><code>tooltip-content</code></td>
+    <td><code>ui-simplicity-select-slider-tooltip-content</code></td>
+  </tr>
+  <tr>
+    <td><code>tooltip-pointer-down</code></td>
+    <td><code>ui-simplicity-select-slider-tooltip-pointer-down</code></td>
+  </tr>
+  <tr>
+    <td><code>tooltip-pointer-down-inner</code></td>
+    <td><code>ui-simplicity-select-slider-tooltip-pointer-down-inner</code></td>
+  </tr>
+</tbody>
+</table></p>
+</li>
+
+<li>
 <p>Removes backwards compatible shims for the following methods:</p>
 
 <ul>
@@ -135,6 +244,46 @@
 <li>$.simplicityHaversineDistanceKm</li>
 </ul>
 </li>
+
+<li>
+<p>Replaces the <code>markerType</code> option of <code>$.simplicityGoogleMapResults</code> with <code>markerCallback</code>.</p>
+</li>
+
+<li>
+<p>Changes the default Google Maps marker back to the standard <code>google.maps.Marker</code> instead of using the custom <code>$.simplicityGoogleMarker</code> class. You can now control this by overriding the <code>markerCallback</code> option of <code>$.simplicityGoogleMarker</code>. To switch over to the <code>$.simplicityGoogleMarker</code> you&#8217;d write:</p>
+</li>
+</ul>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example&#39;</span><span class='p'>).</span><span class='nx'>simplicityGoogleMapResults</span><span class='p'>({</span>
+    <span class='nx'>markerCallback</span><span class='p'>;</span> <span class='nx'>$</span><span class='p'>.</span><span class='nx'>simplicityGoogleMarker</span><span class='p'>.</span><span class='nx'>resultsCallback</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+<ul>
+<li>Removes the developer-only <code>$.simplicityDebug</code> widget. The search response is still fully available from <code>$(&#39;body&#39;).simplicityDiscoverySearch(&#39;searchResponse&#39;)</code>.</li>
+
+<li>The <code>simplicity{vendor}MapShapeCreator</code> and <code>simplcityGoogleMarker</code> widgets are no longer part of simplicity core. They have been migrated to be a standalone plugin which you can obtain from <a href='http://github.com/t11e/simplicity-plugin-map-shape-creator'>http://github.com/t11e/simplicity-plugin-map-shape-creator</a>.</li>
+</ul>
+
+<h2 id='improvements'>Improvements</h2>
+
+<ul>
+<li>Simplified directory layout and build system. The main project layout is now less deep, with the actual JS and CSS files in top level <code>js</code> and <code>css</code> directories.</li>
+
+<li>Removal of server-side components. The project now uses CORS to communicate with the engine directly removing the need for the example PHP components.</li>
+
+<li>Support for developing from a <code>file://</code> URL. You no longer need to serve the <code>docroot</code> directory via Apache or IIS, instead you can just open up the <code>index.html</code> file directly and develop more easily.</li>
+
+<li>Changes build system to use <a href='http://maven.apache.org'>maven</a> and <a href='http://code.google.com/p/wro4j/'>wro4j</a> instead of a custom <a href='http://ant.apache.org'>ant</a> and <a href='https://github.com/t11e/media_compressor/'>media-compressor</a> pipeline. The build command is now <code>mvn clean package</code> instead of <code>ant clean dist</code>.</li>
+
+<li><code>simplicityGoogleMapResults</code> goes back to using the standard <code>google.maps.Marker</code> marker. This makes it a more simple extension of Google Maps and easier to extend.</li>
+
+<li>Adds support for dual-handled sliders to <code>$.ui.simplicitySelectSlider</code>. See the <a href='http://simplicitywidgets.org/userguide/simplicitySelectSlider.html'>userguide page</a> for more details.</li>
+
+<li>All CSS classes now have a widget specific prefix. This prevents conflicts between some of the more generic classes and other custom CSS.</li>
+
+<li>Fixes <code>$.ui.simplicityYahooGeocoder</code> to correctly traverse successful responses.</li>
+
+<li>Improves <code>$.ui.simplicityFacetedInput</code> to support <code>&lt;label&gt;&lt;input/&gt;My Label&lt;/label&gt;</code> as well as the original <code>&lt;label for=&quot;example&quot;&gt;My Label&lt;/label&gt;&lt;input id=&quot;example&quot;/&gt;</code>.</li>
 </ul>
 <div class='page-header'>
   <h1>3.2 <small>2012-10-15</small></h1>
@@ -535,7 +684,7 @@
     <script src="http://cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js"></script>
     <script src="http://cdn.transparensee.com/lib/jquery-plugin/bbq/1.2.1/jquery.ba-bbq.min.js"></script>
     <script src="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.js"></script>
-    <script src="http://cdn.transparensee.com/simplicity/3.2/simplicity.min.js"></script>
+    <script src="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.js"></script>
     <script src="/js/documentation.js"></script>
   </body>
 </html>

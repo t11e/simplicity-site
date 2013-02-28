@@ -9,7 +9,7 @@
     <link href="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.css" rel="stylesheet">
     <link href="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet">
-    <link href="http://cdn.transparensee.com/simplicity/3.2/simplicity.min.css" rel="stylesheet">
+    <link href="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.css" rel="stylesheet">
     <link href="/css/syntax.css" rel="stylesheet">
     <link href="/css/documentation.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -115,6 +115,7 @@
 
 <div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
     <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;&quot;</span><span class='nt'>&gt;</span>Any<span class='nt'>&lt;/option&gt;</span>
         <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;a&quot;</span><span class='nt'>&gt;</span>A<span class='nt'>&lt;/option&gt;</span>
         <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;b&quot;</span><span class='nt'>&gt;</span>B<span class='nt'>&lt;/option&gt;</span>
         <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;c&quot;</span><span class='nt'>&gt;</span>C<span class='nt'>&lt;/option&gt;</span>
@@ -144,6 +145,7 @@
         <div class='well' id='exampleSlider'>
             <label><span class='badge'>1</span> select</label>
             <select name='example'>
+                <option value=''>Any</option>
                 <option value='a'>A</option>
                 <option value='b'>B</option>
                 <option value='c'>C</option>
@@ -157,6 +159,100 @@
             $(function () {
                 $('#exampleSlider div').simplicitySelectSlider({
                   select: '#exampleSlider select'
+                });
+            });
+        </script>
+        <p>
+            Change the value in <span class='badge'>1</span> and see how the
+            slider in <span class='badge'>2</span> is updated.
+        </p>
+        <p>
+            Move the slider in <span class='badge'>2</span> and see how the
+            selection in <span class='badge'>1</span> is updated.
+        </p>
+    </div>
+</div><div class='page-header'>
+  <h1>Dual handled</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            Create two <code>select</code>s with the <code>option</code>s you wish to allow.
+        </p>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;min&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;&quot;</span><span class='nt'>&gt;</span>Any<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;a&quot;</span><span class='nt'>&gt;</span>A<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;b&quot;</span><span class='nt'>&gt;</span>B<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;c&quot;</span><span class='nt'>&gt;</span>C<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;d&quot;</span><span class='nt'>&gt;</span>D<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;e&quot;</span><span class='nt'>&gt;</span>E<span class='nt'>&lt;option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;f&quot;</span><span class='nt'>&gt;</span>F<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;g&quot;</span><span class='nt'>&gt;</span>G<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;max&quot;</span><span class='nt'>&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;&quot;</span><span class='nt'>&gt;</span>Any<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;a&quot;</span><span class='nt'>&gt;</span>A<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;b&quot;</span><span class='nt'>&gt;</span>B<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;c&quot;</span><span class='nt'>&gt;</span>C<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;d&quot;</span><span class='nt'>&gt;</span>D<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;e&quot;</span><span class='nt'>&gt;</span>E<span class='nt'>&lt;option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;f&quot;</span><span class='nt'>&gt;</span>F<span class='nt'>&lt;/option&gt;</span>
+        <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;g&quot;</span><span class='nt'>&gt;</span>G<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;/select&gt;</span>
+    <span class='nt'>&lt;div&gt;&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <p>
+            Then apply the <code>simplicitySelectSlider</code> widget to them.
+        </p>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicitySelectSlider</span><span class='p'>({</span>
+    <span class='nx'>select</span><span class='o'>:</span>  <span class='s1'>&#39;#example select[name=&quot;min&quot;]&#39;</span><span class='p'>,</span>
+    <span class='nx'>secondSelect</span><span class='o'>:</span> <span class='s1'>&#39;#example select[name=&quot;max&quot;]&#39;</span><span class='p'>]</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleDualSlider'>
+            <label><span class='badge'>1</span> min</label>
+            <select name='min'>
+                <option value=''>Any</option>
+                <option value='a'>A</option>
+                <option value='b'>B</option>
+                <option value='c'>C</option>
+                <option value='d'>D</option>
+                <option value='e'>E</option>
+                <option value='f'>F</option>
+                <option value='g'>G</option>
+            </select>
+            <label><span class='badge'>2</span> max</label>
+            <select name='max'>
+                <option value=''>Any</option>
+                <option value='a'>A</option>
+                <option value='b'>B</option>
+                <option value='c'>C</option>
+                <option value='d'>D</option>
+                <option value='e'>E</option>
+                <option value='f'>F</option>
+                <option value='g'>G</option>
+            </select>
+            <label><span class='badge'>3</span> slider</label>
+            <div style='margin: 4em 0 2em 0;'> </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleDualSlider div').simplicitySelectSlider({
+                  select:  '#exampleDualSlider select[name="min"]',
+                  secondSelect: '#exampleDualSlider select[name="max"]',
+                  justifyEndLabels: false
                 });
             });
         </script>
@@ -187,7 +283,7 @@
             <label><input class='checkbox' name='centerTooltip' type='checkbox' /> centerTooltip</label>
             <select id='exampleSliderCust' name='example'>
                 <option value='a'>Alpha</option>
-                <option value='b'>Beta</option>
+                <option value='b'>Bravo</option>
                 <option value='c'>Charlie</option>
                 <option value='d'>Delta</option>
                 <option value='e'>Echo</option>
@@ -198,13 +294,68 @@
                 $('#exampleSliderOptions div:first').simplicitySelectSlider({
                   select: '#exampleSliderOptions select'
                 });
+                $('#exampleSliderOptions select').hide();
                 $('#exampleSliderOptions :checkbox').each(function (idx, elem) {
                     elem.checked = $('#exampleSliderOptions div:first').simplicitySelectSlider('option', elem.name);
                 });
                 $('#exampleSliderOptions :checkbox').click(function (evt) {
-                    var name = evt.target.name,
-                        selected = evt.target.checked;
+                    var name = evt.target.name;
+                    var selected = evt.target.checked;
                     $('#exampleSliderOptions div:first').simplicitySelectSlider('option', name, selected);
+                });
+            });
+        </script>
+        <p>
+            Additionally, for just the dual-handled slider.
+        </p>
+        <div class='well' id='exampleDualSliderOptions'>
+            <div style='margin: 3em 1em 2em 1em;'> </div>
+            <label><input class='checkbox' name='allowHandleOverlap' type='checkbox' /> allowHandleOverlap</label>
+            <label><input class='checkbox' data-recreate='true' name='range' type='checkbox' /> range (non dynamic ui.slider option)</label>
+            <select id='exampleDualSliderCust' name='min'>
+                <option value='a'>Alpha</option>
+                <option value='b'>Bravo</option>
+                <option value='c'>Charlie</option>
+                <option value='d'>Delta</option>
+                <option value='e'>Echo</option>
+                <option value='f'>Foxtrot</option>
+                <option value='g'>Golf</option>
+                <option value='h'>Hotel</option>
+            </select>
+            <select id='exampleDualSliderCust' name='max'>
+                <option value='a'>Alpha</option>
+                <option value='b'>Bravo</option>
+                <option value='c'>Charlie</option>
+                <option value='d'>Delta</option>
+                <option value='e'>Echo</option>
+                <option value='f'>Foxtrot</option>
+                <option value='g'>Golf</option>
+                <option selected='selected' value='h'>Hotel</option>
+            </select>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleDualSliderOptions div:first').simplicitySelectSlider({
+                  select: '#exampleDualSliderOptions select[name="min"]',
+                  secondSelect: '#exampleDualSliderOptions select[name="max"]',
+                  justifyEndLabels: false,
+                  range: true
+                });
+                $('#exampleDualSliderOptions select').hide();
+                $('#exampleDualSliderOptions :checkbox').each(function (idx, elem) {
+                    elem.checked = $('#exampleDualSliderOptions div:first').simplicitySelectSlider('option', elem.name);
+                });
+                $('#exampleDualSliderOptions :checkbox').click(function (evt) {
+                    var name = evt.target.name;
+                    var selected = evt.target.checked;
+                    var recreate = $(evt.target).data('recreate');
+                    var element = $('#exampleDualSliderOptions div:first');
+                    element.simplicitySelectSlider('option', name, selected);
+                    if (recreate) {
+                      var options = element.simplicitySelectSlider('option');
+                      element.simplicitySelectSlider('destroy');
+                      element.simplicitySelectSlider(options);
+                    }
                 });
             });
         </script>
@@ -233,7 +384,7 @@
     <script src="http://cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js"></script>
     <script src="http://cdn.transparensee.com/lib/jquery-plugin/bbq/1.2.1/jquery.ba-bbq.min.js"></script>
     <script src="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.js"></script>
-    <script src="http://cdn.transparensee.com/simplicity/3.2/simplicity.min.js"></script>
+    <script src="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.js"></script>
     <script src="/js/documentation.js"></script>
   </body>
 </html>
