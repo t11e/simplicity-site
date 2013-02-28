@@ -223,6 +223,9 @@ Improvements
   for more details.
 * All CSS classes now have a widget specific prefix. This prevents conflicts between some
   of the more generic classes and other custom CSS.
+* Fixes `$.ui.simplicityYahooGeocoder` to correctly traverse successful responses.
+* Improves `$.ui.simplicityFacetedInput` to support `<label><input/>My Label</label>` as
+  well as the original `<label for="example">My Label</label><input id="example"/>`.
 
 <div class="page-header">
   <h1>3.2 <small>2012-10-15</small></h1>
