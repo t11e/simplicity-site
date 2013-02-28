@@ -22,15 +22,7 @@ lead: $.ui.simplicityFancySelect
 	
 	<li><a href="../symbols/%24.simplicity.html">$.simplicity</a></li>
 	
-	<li><a href="../symbols/%24.simplicityGeoFn.html">$.simplicityGeoFn</a></li>
-	
-	<li><a href="../symbols/%24.simplicityGoogleMarker.html">$.simplicityGoogleMarker</a></li>
-	
-	<li><a href="../symbols/%24.simplicityGoogleMarker.OverlayMarker.html">$.simplicityGoogleMarker.OverlayMarker</a></li>
-	
 	<li><a href="../symbols/%24.ui.html">$.ui</a></li>
-	
-	<li><a href="../symbols/%24.ui-fix.html">$.ui-fix</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityBingGeocoder.html">$.ui.simplicityBingGeocoder</a></li>
 	
@@ -41,10 +33,6 @@ lead: $.ui.simplicityFancySelect
 	<li><a href="../symbols/%24.ui.simplicityBingMapBoundsTracker.html">$.ui.simplicityBingMapBoundsTracker</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityBingMapResults.html">$.ui.simplicityBingMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityBingMapShapeCreator.html">$.ui.simplicityBingMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityDebug.html">$.ui.simplicityDebug</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityDiscoverySearch.html">$.ui.simplicityDiscoverySearch</a></li>
 	
@@ -68,11 +56,7 @@ lead: $.ui.simplicityFancySelect
 	
 	<li><a href="../symbols/%24.ui.simplicityGoogleMapBoundsTracker.html">$.ui.simplicityGoogleMapBoundsTracker</a></li>
 	
-	<li><a href="../symbols/%24.ui.simplicityGoogleMapLoader.html">$.ui.simplicityGoogleMapLoader</a></li>
-	
 	<li><a href="../symbols/%24.ui.simplicityGoogleMapResults.html">$.ui.simplicityGoogleMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityGoogleMapShapeCreator.html">$.ui.simplicityGoogleMapShapeCreator</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityHistory.html">$.ui.simplicityHistory</a></li>
 	
@@ -88,12 +72,6 @@ lead: $.ui.simplicityFancySelect
 	
 	<li><a href="../symbols/%24.ui.simplicityMapQuestMapResults.html">$.ui.simplicityMapQuestMapResults</a></li>
 	
-	<li><a href="../symbols/%24.ui.simplicityMapQuestMapShapeCreator.html">$.ui.simplicityMapQuestMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityMapShapeCreator.html">$.ui.simplicityMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityMapShapeCreatorUi.html">$.ui.simplicityMapShapeCreatorUi</a></li>
-	
 	<li><a href="../symbols/%24.ui.simplicityNokiaGeocoder.html">$.ui.simplicityNokiaGeocoder</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityNokiaMap.html">$.ui.simplicityNokiaMap</a></li>
@@ -103,8 +81,6 @@ lead: $.ui.simplicityFancySelect
 	<li><a href="../symbols/%24.ui.simplicityNokiaMapBoundsTracker.html">$.ui.simplicityNokiaMapBoundsTracker</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityNokiaMapResults.html">$.ui.simplicityNokiaMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityNokiaMapShapeCreator.html">$.ui.simplicityNokiaMapShapeCreator</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityPageSnapBack.html">$.ui.simplicityPageSnapBack</a></li>
 	
@@ -165,7 +141,7 @@ a <code>li</code>. The template can be overriden to generate a different
 mapping.
 				
 				
-					<br /><i>Defined in: </i> <a href="../symbols/src/simplicity_docroot_js_simplicity_simplicityFancySelect.js.html">simplicityFancySelect.js</a>.
+					<br /><i>Defined in: </i> <a href="../symbols/src/simplicity_js_ui.simplicityFancySelect.js.html">ui.simplicityFancySelect.js</a>.
 				
 			</p>
 
@@ -439,7 +415,7 @@ mapping.
   <dt>checkableInputSelector</dt>
   <dd>
     Determines the selector (within the option template) to use to identify a checkable DOM input that reflects the current
-    widget state. Defaults to <code>:checkbox.option-checkbox,:radio.option-radio</code>.
+    widget state. Defaults to <code>:checkbox.ui-simplicity-fancy-select-checkbox,:radio.ui-simplicity-fancy-select-radio</code>.
   </dd>
   <dt>radioStyle</dt>
   <dd>
@@ -483,8 +459,8 @@ mapping.
 					</div>
 					<div class="description">
 						Creates an option from the template. Adds <code>facet-id</code>, <code>is-path</code>
-and <code>count</code> data attributes to the created element. Sets the label (<code>.label</code>)
-and count (</code>.count</code>) to contained elements that match the appropriate class.
+and <code>count</code> data attributes to the created element. Sets the label (<code>.ui-simplicity-fancy-select-label</code>)
+and count (</code>.ui-simplicity-fancy-select-count</code>) to contained elements that match the appropriate class.
 Triggers a <code>createOption</code> widget event (externally seen as <code>simplicityfancyfacetscreateoption</code>)
 which can be used to customize the generated DOM element.
 						

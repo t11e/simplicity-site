@@ -22,15 +22,7 @@ lead: $.ui.simplicityFancyFacets
 	
 	<li><a href="../symbols/%24.simplicity.html">$.simplicity</a></li>
 	
-	<li><a href="../symbols/%24.simplicityGeoFn.html">$.simplicityGeoFn</a></li>
-	
-	<li><a href="../symbols/%24.simplicityGoogleMarker.html">$.simplicityGoogleMarker</a></li>
-	
-	<li><a href="../symbols/%24.simplicityGoogleMarker.OverlayMarker.html">$.simplicityGoogleMarker.OverlayMarker</a></li>
-	
 	<li><a href="../symbols/%24.ui.html">$.ui</a></li>
-	
-	<li><a href="../symbols/%24.ui-fix.html">$.ui-fix</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityBingGeocoder.html">$.ui.simplicityBingGeocoder</a></li>
 	
@@ -41,10 +33,6 @@ lead: $.ui.simplicityFancyFacets
 	<li><a href="../symbols/%24.ui.simplicityBingMapBoundsTracker.html">$.ui.simplicityBingMapBoundsTracker</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityBingMapResults.html">$.ui.simplicityBingMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityBingMapShapeCreator.html">$.ui.simplicityBingMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityDebug.html">$.ui.simplicityDebug</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityDiscoverySearch.html">$.ui.simplicityDiscoverySearch</a></li>
 	
@@ -68,11 +56,7 @@ lead: $.ui.simplicityFancyFacets
 	
 	<li><a href="../symbols/%24.ui.simplicityGoogleMapBoundsTracker.html">$.ui.simplicityGoogleMapBoundsTracker</a></li>
 	
-	<li><a href="../symbols/%24.ui.simplicityGoogleMapLoader.html">$.ui.simplicityGoogleMapLoader</a></li>
-	
 	<li><a href="../symbols/%24.ui.simplicityGoogleMapResults.html">$.ui.simplicityGoogleMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityGoogleMapShapeCreator.html">$.ui.simplicityGoogleMapShapeCreator</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityHistory.html">$.ui.simplicityHistory</a></li>
 	
@@ -88,12 +72,6 @@ lead: $.ui.simplicityFancyFacets
 	
 	<li><a href="../symbols/%24.ui.simplicityMapQuestMapResults.html">$.ui.simplicityMapQuestMapResults</a></li>
 	
-	<li><a href="../symbols/%24.ui.simplicityMapQuestMapShapeCreator.html">$.ui.simplicityMapQuestMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityMapShapeCreator.html">$.ui.simplicityMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityMapShapeCreatorUi.html">$.ui.simplicityMapShapeCreatorUi</a></li>
-	
 	<li><a href="../symbols/%24.ui.simplicityNokiaGeocoder.html">$.ui.simplicityNokiaGeocoder</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityNokiaMap.html">$.ui.simplicityNokiaMap</a></li>
@@ -103,8 +81,6 @@ lead: $.ui.simplicityFancyFacets
 	<li><a href="../symbols/%24.ui.simplicityNokiaMapBoundsTracker.html">$.ui.simplicityNokiaMapBoundsTracker</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityNokiaMapResults.html">$.ui.simplicityNokiaMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityNokiaMapShapeCreator.html">$.ui.simplicityNokiaMapShapeCreator</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityPageSnapBack.html">$.ui.simplicityPageSnapBack</a></li>
 	
@@ -163,7 +139,7 @@ A more complex extension of simplicityFancySelect that supports a flyout
 for extra options as well as a selected area for the current selection.
 				
 				
-					<br /><i>Defined in: </i> <a href="../symbols/src/simplicity_docroot_js_simplicity_simplicityFancyFacets.js.html">simplicityFancyFacets.js</a>.
+					<br /><i>Defined in: </i> <a href="../symbols/src/simplicity_js_ui.simplicityFancyFacets.js.html">ui.simplicityFancyFacets.js</a>.
 				
 			</p>
 
@@ -389,14 +365,14 @@ for extra options as well as a selected area for the current selection.
   <dt>availableTemplate</dt>
   <dd>
     The default template to use for the available facets block of <code>simplicityFancySelect</code>,
-    (selector '.available-container'). Also acts as the default for <code>selectedTemplate</code>
+    (selector '.ui-simplicity-fancy-facets-available-container'). Also acts as the default for <code>selectedTemplate</code>
     and <code>overflowTemplate</code>.
     <p>Default:</p>
     <pre>
-&lt;ul class="options ui-helper-clearfix">
- &lt;li class="option ui-helper-clearfix">
-   &lt;a href="#" class="label"/>
-   &lt;span class="count"/>
+&lt;ul class="ui-simplicity-fancy-select-options ui-helper-clearfix">
+ &lt;li class="ui-simplicity-fancy-select-option ui-helper-clearfix">
+   &lt;a href="#" class="ui-simplicity-fancy-select-label"/>
+   &lt;span class="ui-simplicity-fancy-select-count"/>
  &lt;/li>
 &lt;/ul></pre>
   </dd>
@@ -404,19 +380,19 @@ for extra options as well as a selected area for the current selection.
   <dd>
     When <code>''</code> falls back to the value for option <code>availableTemplate</code>.
     Otherwise it determines the template to use for <code>simplicityFancySelect</code>
-    when rendering the selected facets (selector '.selected-container'). Default is <code>''</code>.
+    when rendering the selected facets (selector '.ui-simplicity-fancy-facets-selected-container'). Default is <code>''</code>.
   </dd>
   <dt>overflowTemplate</dt>
   <dd>
     When <code>''</code> falls back to the value for option <code>availableTemplate</code>.
     Otherwise it determines the template to use for <code>simplicityFancySelect</code>
-    when rendering the overflow facets (selector '.overflow-container'). Default is <code>''</code>.
+    when rendering the overflow facets (selector '.ui-simplicity-fancy-facets-overflow-container'). Default is <code>''</code>.
   </dd>
   <dt>pathTemplate</dt>
   <dd>
     When <code>''</code> falls back to the value for option <code>availableTemplate</code>.
     Otherwise it determines the template to use for <code>simplicityFancySelect</code>
-    when rendering the facets navigation path (selector '.path-container'). Default is <code>''</code>.
+    when rendering the facets navigation path (selector '.ui-simplicity-fancy-facets-path-container'). Default is <code>''</code>.
   </dd>
 </dl>
 						

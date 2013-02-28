@@ -22,15 +22,7 @@ lead: $.simplicity
 	
 	<li><a href="../symbols/%24.simplicity.html">$.simplicity</a></li>
 	
-	<li><a href="../symbols/%24.simplicityGeoFn.html">$.simplicityGeoFn</a></li>
-	
-	<li><a href="../symbols/%24.simplicityGoogleMarker.html">$.simplicityGoogleMarker</a></li>
-	
-	<li><a href="../symbols/%24.simplicityGoogleMarker.OverlayMarker.html">$.simplicityGoogleMarker.OverlayMarker</a></li>
-	
 	<li><a href="../symbols/%24.ui.html">$.ui</a></li>
-	
-	<li><a href="../symbols/%24.ui-fix.html">$.ui-fix</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityBingGeocoder.html">$.ui.simplicityBingGeocoder</a></li>
 	
@@ -41,10 +33,6 @@ lead: $.simplicity
 	<li><a href="../symbols/%24.ui.simplicityBingMapBoundsTracker.html">$.ui.simplicityBingMapBoundsTracker</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityBingMapResults.html">$.ui.simplicityBingMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityBingMapShapeCreator.html">$.ui.simplicityBingMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityDebug.html">$.ui.simplicityDebug</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityDiscoverySearch.html">$.ui.simplicityDiscoverySearch</a></li>
 	
@@ -68,11 +56,7 @@ lead: $.simplicity
 	
 	<li><a href="../symbols/%24.ui.simplicityGoogleMapBoundsTracker.html">$.ui.simplicityGoogleMapBoundsTracker</a></li>
 	
-	<li><a href="../symbols/%24.ui.simplicityGoogleMapLoader.html">$.ui.simplicityGoogleMapLoader</a></li>
-	
 	<li><a href="../symbols/%24.ui.simplicityGoogleMapResults.html">$.ui.simplicityGoogleMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityGoogleMapShapeCreator.html">$.ui.simplicityGoogleMapShapeCreator</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityHistory.html">$.ui.simplicityHistory</a></li>
 	
@@ -88,12 +72,6 @@ lead: $.simplicity
 	
 	<li><a href="../symbols/%24.ui.simplicityMapQuestMapResults.html">$.ui.simplicityMapQuestMapResults</a></li>
 	
-	<li><a href="../symbols/%24.ui.simplicityMapQuestMapShapeCreator.html">$.ui.simplicityMapQuestMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityMapShapeCreator.html">$.ui.simplicityMapShapeCreator</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityMapShapeCreatorUi.html">$.ui.simplicityMapShapeCreatorUi</a></li>
-	
 	<li><a href="../symbols/%24.ui.simplicityNokiaGeocoder.html">$.ui.simplicityNokiaGeocoder</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityNokiaMap.html">$.ui.simplicityNokiaMap</a></li>
@@ -103,8 +81,6 @@ lead: $.simplicity
 	<li><a href="../symbols/%24.ui.simplicityNokiaMapBoundsTracker.html">$.ui.simplicityNokiaMapBoundsTracker</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityNokiaMapResults.html">$.ui.simplicityNokiaMapResults</a></li>
-	
-	<li><a href="../symbols/%24.ui.simplicityNokiaMapShapeCreator.html">$.ui.simplicityNokiaMapShapeCreator</a></li>
 	
 	<li><a href="../symbols/%24.ui.simplicityPageSnapBack.html">$.ui.simplicityPageSnapBack</a></li>
 	
@@ -157,10 +133,12 @@ lead: $.simplicity
 				
 				
 			
-				Simplicity Widgets
+				Simplicity function namespace.
+
+Reusable functions and constants from the Simplicity Widgets project.
 				
 				
-					<br /><i>Defined in: </i> <a href="../symbols/src/simplicity_docroot_js_simplicity_simplicity.js.html">simplicity.js</a>.
+					<br /><i>Defined in: </i> <a href="../symbols/src/simplicity_js__jsdoc.js.html">_jsdoc.js</a>.
 				
 			</p>
 
@@ -221,6 +199,98 @@ lead: $.simplicity
 
 <!-- ============================== methods summary ======================== -->
 			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class $.simplicity.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.ajaxHelper">ajaxHelper</a></b>(exeContext)
+								</div>
+								<div class="description">Plugin to manage asynchronous ajax requests such that only the most
+recent request is currently inflight.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.degreesToRadians">degreesToRadians</a></b>(v)
+								</div>
+								<div class="description">Converts degrees to radians.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.equiv">equiv</a></b>(lhs, rhs)
+								</div>
+								<div class="description">Deep equality checker.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.haversineDistanceKm">haversineDistanceKm</a></b>(lat1, lng1, lat2, lng2)
+								</div>
+								<div class="description">Calculates the haversine distance in km between two coordinates.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.haversineDistanceMiles">haversineDistanceMiles</a></b>(lat1, lng1, lat2, lng2)
+								</div>
+								<div class="description">Calculates the haversine distance in miles between two coordinates.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.haversineDistanceRadians">haversineDistanceRadians</a></b>(lat1, lng1, lat2, lng2)
+								</div>
+								<div class="description">Calculates the haversine distance in radians between two coordinates.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.proxy">proxy</a></b>(fn, thisObject)
+								</div>
+								<div class="description">Variation of $.proxy that doesn't share a guid and thus allows
+for unbinding a single proxied function from an event.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">$.simplicity.<b><a href="../symbols/%24.simplicity.html#.radiansToDegrees">radiansToDegrees</a></b>(v)
+								</div>
+								<div class="description">Converts radians to degrees.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
 <!-- ============================== events summary ======================== -->
 			
 
@@ -275,6 +345,9 @@ diagnostics to report which version of the widgets are
 currently in use.
 </p>
 						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.version.js.html">simplicity.version.js</a>.
+						
 						
 					</div>
 					
@@ -294,6 +367,458 @@ currently in use.
 			
 
 <!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".ajaxHelper"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>ajaxHelper</b>(exeContext)
+					
+					</div>
+					<div class="description">
+						Plugin to manage asynchronous ajax requests such that only the most
+recent request is currently inflight. Any inflight request will be
+aborted, leaving only the most recent request to complete.
+
+The helper class also keeps track of total requests, success and error
+counts. These statistics are available using the .getStats() method.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.ajaxHelper.js.html">simplicity.ajaxHelper.js</a>.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">  var ajaxHelper = new $.simplicity.ajaxHelper(this);
+  var xhr = ajaxHelper.ajax({
+    url: '/my_search_controller.php',
+    type: 'GET',
+    contentType: 'application/json',
+    error: function (data, textStatus, xhr) {...},
+    success: function (data, textStatus, xhr) {...},
+    debug: false
+  });
+  console.log(ajaxHelper.getStats());</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>exeContext</b>
+									
+								</dt>
+								<dd>The target <code>Object</code> to use for the context of the supplied
+  $.ajax() success and error callback options.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".degreesToRadians"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>degreesToRadians</b>(v)
+					
+					</div>
+					<div class="description">
+						Converts degrees to radians.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.degreesToRadians.js.html">simplicity.degreesToRadians.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>v</b>
+									
+								</dt>
+								<dd>The value to convert, in degrees.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The converted value in radians.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".equiv"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>equiv</b>(lhs, rhs)
+					
+					</div>
+					<div class="description">
+						Deep equality checker.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.equiv.js.html">simplicity.equiv.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>lhs</b>
+									
+								</dt>
+								<dd>The first object to be compared</dd>
+							
+								<dt>
+									<b>rhs</b>
+									
+								</dt>
+								<dd>The second object to be compared</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>Ported from http://philrathe.com/articles/equiv.</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".haversineDistanceKm"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>haversineDistanceKm</b>(lat1, lng1, lat2, lng2)
+					
+					</div>
+					<div class="description">
+						Calculates the haversine distance in km between two coordinates.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.haversineDistanceKm.js.html">simplicity.haversineDistanceKm.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>lat1</b>
+									
+								</dt>
+								<dd>The latitude of the first coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lng1</b>
+									
+								</dt>
+								<dd>The longitude of the first coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lat2</b>
+									
+								</dt>
+								<dd>The latitude of the second coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lng2</b>
+									
+								</dt>
+								<dd>The longitude of the second coordinate in degrees.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The calculated distance in miles.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".haversineDistanceMiles"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>haversineDistanceMiles</b>(lat1, lng1, lat2, lng2)
+					
+					</div>
+					<div class="description">
+						Calculates the haversine distance in miles between two coordinates.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.haversineDistanceMiles.js.html">simplicity.haversineDistanceMiles.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>lat1</b>
+									
+								</dt>
+								<dd>The latitude of the first coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lng1</b>
+									
+								</dt>
+								<dd>The longitude of the first coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lat2</b>
+									
+								</dt>
+								<dd>The latitude of the second coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lng2</b>
+									
+								</dt>
+								<dd>The longitude of the second coordinate in degrees.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The calculated distance in miles.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".haversineDistanceRadians"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>haversineDistanceRadians</b>(lat1, lng1, lat2, lng2)
+					
+					</div>
+					<div class="description">
+						Calculates the haversine distance in radians between two coordinates.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.haversineDistanceRadians.js.html">simplicity.haversineDistanceRadians.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>lat1</b>
+									
+								</dt>
+								<dd>The latitude of the first coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lng1</b>
+									
+								</dt>
+								<dd>The longitude of the first coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lat2</b>
+									
+								</dt>
+								<dd>The latitude of the second coordinate in degrees.</dd>
+							
+								<dt>
+									<b>lng2</b>
+									
+								</dt>
+								<dd>The longitude of the second coordinate in degrees.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The calculated distance in radians.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".proxy"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>proxy</b>(fn, thisObject)
+					
+					</div>
+					<div class="description">
+						Variation of $.proxy that doesn't share a guid and thus allows
+for unbinding a single proxied function from an event.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.proxy.js.html">simplicity.proxy.js</a>.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">  var clickHandler = $.simplicity.proxy(function () {}, this);
+  $('#example').bind('click', clickHandler);
+  // Do something
+  $('#example).unbind('click', clickHandler);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>fn</b>
+									
+								</dt>
+								<dd>The function to proxy.</dd>
+							
+								<dt>
+									<b>thisObject</b>
+									
+								</dt>
+								<dd>The object to apply the function to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".radiansToDegrees"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">$.simplicity.</span><b>radiansToDegrees</b>(v)
+					
+					</div>
+					<div class="description">
+						Converts radians to degrees.
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/simplicity_js_simplicity.radiansToDegrees.js.html">simplicity.radiansToDegrees.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>v</b>
+									
+								</dt>
+								<dd>The value to convert, in radians.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The converted value in degrees.</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
 			
 			
 <!-- ============================== event details ========================= -->		
