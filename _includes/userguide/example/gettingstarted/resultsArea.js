@@ -1,4 +1,5 @@
 $('#searchResults').simplicitySearchResults({
-  resultsCallback: window.search_results_gsa
+  resultsCallback: window.searchResults
 });
+
 $('#paginationTop,#paginationBottom').simplicityPagination();

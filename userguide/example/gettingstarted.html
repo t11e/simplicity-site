@@ -14,11 +14,12 @@ lead: Put it in neutral and turn the ignition.
 </div>
 
 <style>
-  .ui-simplicity-search-results .result-set .result-row {
-    font-size: 0.8em;
-    margin: 0.5em 0 0.5em 0;
-    padding: 0.5em 1em 0.5em 1em;
-    line-height: 1em;
+  .ui-simplicity-search-results .exactmatch pre {
+      background-color: #f5f5f5;
+  }
+  .ui-simplicity-search-results .closematch pre {
+      color: #a5a5a5;
+      background-color: #ffffff;
   }
   .ui-simplicity-fancy-select ul {
     font-size: 0.8em;
@@ -35,8 +36,8 @@ lead: Put it in neutral and turn the ignition.
   </div>
 </div>
 
-<script src="{{site.url}}/js/search_controller_gsa.js"></script>
-<script src="{{site.url}}/js/search_results_gsa.js"></script>
+<script src="{{site.url}}/js/searchController.js"></script>
+<script src="{{site.url}}/js/searchResults.js"></script>
 <script type="text/javascript">
   $(function() {
 {% include userguide/example/gettingstarted/state.js %}

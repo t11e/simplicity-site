@@ -158,10 +158,15 @@ Finally, we perform the [page level setup](/userguide/simplicityDiscoverySearch.
 For the best user experience, we recommend placing any slow-loading scripts such map vendor scripts below all the Simplicity Widget
 JavaScript so that the widgets can be fully functional and displayed before the slow loading scripts are executed.
 
+Note the example snippets above refer to two external JavaScript functions `window.searchController` and `window.searchResults`
+which aren't included above.
+
 <div class="page-header">
   <h1>Summary</h1>
 </div>
 
-We've demonstrated how to build a basic search page that use an external PHP backed search controller accessed via AJAX CORS requests.
+We've demonstrated how to build a basic search page that uses JavaScript based search controller and results rendering and connects
+directly to the Discovery Search Engine using Ajax requests with CORS.
 
-<a href="{{site.url}}/userguide/example/gettingstarted.html" class="btn btn-primary button-large">View Example</a>
+You can try out the [completed page](http://t11e.github.com/simplicity-template-example) or view/download the source files from
+the [github repository](http://github.com/t11e/simplicity-template-example).

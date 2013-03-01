@@ -1,16 +1,10 @@
-$('#searchForm :input').simplicityInputs();
+$('#q,#genre').simplicityInputs();
 
-$('select[name="formats_avail"]').simplicityFacetedSelect({
-  optionTemplate: '{option}  ({count})'
+$('#genre').simplicityFacetedSelect().hide();
+$('#genreFancy').simplicityFancySelect({
+    select: '#genre'
 });
 
-$('select[name="agency"]').simplicityFacetedSelect({
-  maxDepth: 1
-});
-$('#agencyFancy').simplicityFancySelect({
-  select: 'select[name="agency"]'
-});
-
-$('#resetButton').click(function () {
+$('#resetSearch').click(function () {
   $('body').simplicityState('reset');
 });
