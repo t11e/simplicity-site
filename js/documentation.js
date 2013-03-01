@@ -5,8 +5,9 @@
         result = JSON.parse(input);
       } catch (e) {
         try {
+          /*jshint evil: true*/
           result = eval( '(' + input + ')');
-        } catch (e) {
+        } catch (e2) {
           result = defaultValue;
         }
       }
