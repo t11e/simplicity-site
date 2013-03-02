@@ -20,15 +20,13 @@
     <div class="navbar navbar-inverse navbar-static-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">Simplicity Widgets</a>
+          <a class="brand" href="{{site.url}}/">Simplicity Widgets</a>
           <ul class="nav">
-            {% for nav in site.topnav %}
-              {% if page.nav == nav.nav %}
-                <li class="active"><a href="{{nav.url}}" class="active">{{nav.label}}</a></li>
-              {% else %}
-                <li><a href="{{nav.url}}">{{nav.label}}</a></li>
-              {% endif %}
-            {% endfor %}
+            <li class="{% if page.nav == 'home' %}active{% endif %}"><a href="{{site.url}}/">home</a></li>
+            <li class="{% if page.nav == 'download' %}active{% endif %}"><a href="{{site.url}}/download.html">download</a></li>
+            <li class="{% if page.nav == 'userguide' %}active{% endif %}"><a href="{{site.url}}/userguide/">userguide</a></li>
+            <li class="{% if page.nav == 'jsdoc' %}active{% endif %}"><a href="{{site.url}}/jsdoc/">jsdoc</a></li>
+            <li class="{% if page.nav == 'changelog' %}active{% endif %}"><a href="{{site.url}}/changelog.html">changelog</a></li>
           </ul>
         </div>
       </div>

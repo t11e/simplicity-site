@@ -6,20 +6,4 @@ simplicityRelease: 4.0
 jQueryRelease: 1.9.1
 jQueryUiRelease: 1.10.0
 jQueryUiTheme: base
-topnav:
-  - nav: home
-    label: home
-    url: /
-  - nav: userguide
-    label: userguide
-    url: /userguide/
-  - nav: download
-    label: download
-    url: /download.html
-  - nav: jsdoc
-    label: jsdoc
-    url: /jsdoc/
-  - nav: changelog
-    label: changelog
-    url: /changelog.html
 pygments: true
