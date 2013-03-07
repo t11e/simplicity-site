@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.css" rel="stylesheet">
-    <link href="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="http://cdn.transparensee.com/lib/bootstrap/2.3.0/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.transparensee.com/lib/bootstrap/2.3.0/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet">
     <link href="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.css" rel="stylesheet">
     <link href="/css/syntax.css" rel="stylesheet">
@@ -20,29 +20,15 @@
     <div class="navbar navbar-inverse navbar-static-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">Simplicity Widgets</a>
+          <a class="brand" href="/">Simplicity Widgets <sup>4.0</sup></a>
           <ul class="nav">
-            
-              
-                <li><a href="/">home</a></li>
-              
-            
-              
-                <li class="active"><a href="/userguide/" class="active">userguide</a></li>
-              
-            
-              
-                <li><a href="/download.html">download</a></li>
-              
-            
-              
-                <li><a href="/jsdoc/">jsdoc</a></li>
-              
-            
-              
-                <li><a href="/changelog.html">changelog</a></li>
-              
-            
+            <li class=""><a href="/">home</a></li>
+            <li class=""><a href="/download.html">download</a></li>
+            <li class=""><a href="/examples.html">examples</a></li>
+            <li class=""><a href="/plugins.html">plugins</a></li>
+            <li class="active"><a href="/userguide/">userguide</a></li>
+            <li class=""><a href="/jsdoc/">jsdoc</a></li>
+            <li class=""><a href="/changelog.html">changelog</a></li>
           </ul>
         </div>
       </div>
@@ -100,12 +86,6 @@
             <li class=""><a href="/userguide/googleMaps.html">Google Maps</a></li>
         </ul>
     </div>
-    <div class="span4">
-        <ul class="nav nav-list">
-            <li class="nav-header">Examples</li>
-            <li class="active"><a href="/userguide/example/gettingstarted.html">Getting Started</a></li>
-        </ul>
-    </div>
 </div>
 
 
@@ -115,11 +95,12 @@
 </div>
 
 <style>
-  .ui-simplicity-search-results .result-set .result-row {
-    font-size: 0.8em;
-    margin: 0.5em 0 0.5em 0;
-    padding: 0.5em 1em 0.5em 1em;
-    line-height: 1em;
+  .ui-simplicity-search-results .exactmatch pre {
+      background-color: #f5f5f5;
+  }
+  .ui-simplicity-search-results .closematch pre {
+      color: #a5a5a5;
+      background-color: #ffffff;
   }
   .ui-simplicity-fancy-select ul {
     font-size: 0.8em;
@@ -129,34 +110,21 @@
 
 <div class="row">
   <div class="span3">
-<form id="searchForm" class="form-search" onsubmit="return false;">
-  <button id="searchButton" type="submit" class="btn">Search</button>
-  <button id="resetButton" type="button" class="btn">Reset</button>
-  <label>
-    Text Search
-    <input type="text" name="dataset_freetext" class="input-medium search-query">
-  </label>
-  <label>
-    Category Type
-    <select name="category_type" class="input-medium">
-      <option value="">Any...</option>
-      <option value="1">Raw Data Catalog</option>
-      <option value="2">Tool Catalog</option>
-    </select>
-  </label>
-  <label>
-    Formats Available
-    <select name="formats_avail" class="input-medium">
-      <option value="">Any...</option>
-    </select>
-  </label>
-  <label>
-    Agency
-    <select name="agency" class="ui-helper-hidden-accessible">
-      <option value="">Any...</option>
-    </select>
-    <div id="agencyFancy"></div>
-  </label>
+<form id="searchForm" onsubmit="return false;">
+  <fieldset>
+    <div class="input-append">
+      <input id="q" name="q" type="text" class="span2" placeholder="Keyword search">
+      <button class="btn" type="button">Go!</button>
+    </div>
+    <label>Genre
+      <select id="genre" name="genre" multiple="multiple">
+        <option value="">Select</option>
+      </select>
+    </label>
+    <div id="genreFancy"></div>
+    <hr />
+    <button id="resetSearch" type="button" name="resetSearch" class="btn">Reset Search</button>
+  </fieldset>
 </form>
 
   </div>
@@ -168,46 +136,38 @@
   </div>
 </div>
 
-<script src="/js/search_controller_gsa.js"></script>
-<script src="/js/search_results_gsa.js"></script>
+<script src="/js/searchController.js"></script>
+<script src="/js/searchResults.js"></script>
 <script type="text/javascript">
   $(function() {
 $('body').simplicityState();
 
     
-$('#searchForm :input').simplicityInputs();
+$('#q,#genre').simplicityInputs();
 
-$('select[name="formats_avail"]').simplicityFacetedSelect({
-  optionTemplate: '{option}  ({count})'
+$('#genre').simplicityFacetedSelect().hide();
+$('#genreFancy').simplicityFancySelect({
+    select: '#genre'
 });
 
-$('select[name="agency"]').simplicityFacetedSelect({
-  maxDepth: 1
-});
-$('#agencyFancy').simplicityFancySelect({
-  select: 'select[name="agency"]'
-});
-
-$('#resetButton').click(function () {
+$('#resetSearch').click(function () {
   $('body').simplicityState('reset');
 });
 
 
 $('#searchResults').simplicitySearchResults({
-  resultsCallback: window.search_results_gsa
+  resultsCallback: window.searchResults
 });
+
 $('#paginationTop,#paginationBottom').simplicityPagination();
 
 
 $('body')
-  .simplicityState('mergeQueryParams')
-  .simplicityHistory()
-  .simplicityState('triggerChangeEvent')
   .simplicityPageSnapBack()
   .simplicityDiscoverySearch({
-    url: 'http://gsa.discoverysearchengine.com:8090/ws/query',
+    url: 'http://freebase-movies.discoverysearchengine.com:8090/ws/query',
     backend: 'engine',
-    controllerCallback: window.search_controller_gsa,
+    controllerCallback: window.searchController
   })
   .simplicityDiscoverySearch('search');
 
@@ -235,8 +195,7 @@ $('body')
     <![endif]-->
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
     <script src="http://cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js"></script>
-    <script src="http://cdn.transparensee.com/lib/jquery-plugin/bbq/1.2.1/jquery.ba-bbq.min.js"></script>
-    <script src="http://cdn.transparensee.com/lib/bootstrap/2.1.1/bootstrap.min.js"></script>
+    <script src="http://cdn.transparensee.com/lib/bootstrap/2.3.0/bootstrap.min.js"></script>
     <script src="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.js"></script>
     <script src="/js/documentation.js"></script>
   </body>
