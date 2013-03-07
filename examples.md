@@ -27,6 +27,24 @@ lead: If a picture is worth a thousand words...
 
 <div class="media">
   <a class="pull-left" href="#">
+    <img class="media-object" src="images/simplicity-example-movies.png" width="300" height="200">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">simplicity-example-movies</h4>
+    <p>
+      Movie search using data from <a href="http://freebase.com">Freebase</a>.
+    </p>
+    <p>
+      <a href="http://t11e.github.com/simplicity-example-movies" class="btn">View Example</a>
+      <a href="http://github.com/t11e/simplicity-example-movies" class="btn">Source Repository</a>
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<div class="media">
+  <a class="pull-left" href="#">
     <img class="media-object" src="images/simplicity.png" width="300" height="200">
   </a>
   <div class="media-body">
