@@ -15,7 +15,21 @@ lead: Handles are a drag.
 <div class="row">
     <div class="span8">
         <p>
-            Create a <code>select</code> with the <code>option</code>s you wish to allow.
+            A <a href="http://jqueryui.com/slider/">$.ui.slider</a> that is bound to one (or two) <code>select</code> inputs.
+            Best used when you have a reasonable number of discrete choices and want to enable easy mapping
+            between their value and label.
+        </p>
+    </div>
+</div>
+
+<div class="page-header">
+  <h1>Single Handled</h1>
+</div>
+<div class="row">
+    <div class="span8">
+        <p>
+            Create a <code>select</code> with the <code>option</code>s you wish to allow and
+            a target <code>div</code> for the slider.
         </p>
 {% highlight html %}
 <div id="example">
@@ -78,7 +92,8 @@ $('#example div').simplicitySelectSlider({
 <div class="row">
     <div class="span8">
         <p>
-            Create two <code>select</code>s with the <code>option</code>s you wish to allow.
+            Create two <code>select</code>s with the <code>option</code>s you wish to allow
+            and a target <code>div</code> for the slider.
         </p>
 {% highlight html %}
 <div id="example">
@@ -153,12 +168,12 @@ $('#example div').simplicitySelectSlider({
             });
         </script>
         <p>
-            Change the value in <span class="badge">1</span> and see how the
-            slider in <span class="badge">2</span> is updated.
+            Change the value in <span class="badge">1</span> or <span class="badge">2</span> and see how the
+            slider in <span class="badge">3</span> is updated.
         </p>
         <p>
-            Move the slider in <span class="badge">2</span> and see how the
-            selection in <span class="badge">1</span> is updated.
+            Move the slider in <span class="badge">3</span> and see how the
+            selection in <span class="badge">1</span> and <span class="badge">2</span> are updated.
         </p>
     </div>
 </div>
