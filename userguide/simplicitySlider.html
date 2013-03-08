@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simplicity Widgets - simplicitySlider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="http://cdn.transparensee.com/lib/bootstrap/2.3.0/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.transparensee.com/lib/bootstrap/2.3.0/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/documentation.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Simplicity Widgets <sup>4.0</sup></a>
+          <ul class="nav">
+            <li class=""><a href="/">home</a></li>
+            <li class=""><a href="/download.html">download</a></li>
+            <li class=""><a href="/examples.html">examples</a></li>
+            <li class=""><a href="/plugins.html">plugins</a></li>
+            <li class="active"><a href="/userguide/">userguide</a></li>
+            <li class=""><a href="/jsdoc/">jsdoc</a></li>
+            <li class=""><a href="/changelog.html">changelog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+      <header class="subhead">
+        <div class="container">
+          <h1>simplicitySlider</h1>
+          
+            <p class="lead">Handles are a drag.</p>
+          
+        </div>
+      </header>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <div class="container">
+<div class='userguide-nav row'>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Basics</li>
+            <li class=''><a href='/userguide/'>Getting started</a></li>
+            <li class=''><a href='/userguide/primer.html'>Primer</a></li>
+            <li class=''><a href='/userguide/widgetgroups.html'>Widget groups</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Search</li>
+            <li class=''><a href='/userguide/simplicityState.html'>simplicityState</a></li>
+            <li class=''><a href='/userguide/simplicityDiscoverySearch.html'>simplicityDiscoverySearch</a></li>
+            <li class=''><a href='/userguide/simplicityInputs.html'>simplicityInputs</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Response Widgets</li>
+            <li class=''><a href='/userguide/simplicitySearchResults.html'>simplicitySearchResults</a></li>
+            <li class=''><a href='/userguide/simplicityFacetedSelect.html'>simplicityFacetedSelect</a></li>
+        </ul>
+    </div>
+</div><div class='userguide-nav row'>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>User Interface</li>
+            <li class=''><a href='/userguide/simplicityFancySelect.html'>simplicityFancySelect</a></li>
+            <li class='active'><a href='/userguide/simplicitySlider.html'>simplicitySlider</a></li>
+            <li class=''><a href='/userguide/simplicitySelectSlider.html'>simplicitySelectSlider</a></li>
+        </ul>
+    </div>
+    <div class='span4'>
+        <ul class='nav nav-list'>
+            <li class='nav-header'>Mapping</li>
+            <li class=''><a href='/userguide/googleMaps.html'>Google Maps</a></li>
+        </ul>
+    </div>
+</div><div class='page-header'>
+  <h1>simplicitySlider</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            A <a href='http://jqueryui.com/slider/'>$.ui.slider</a> that is bound to one (or two) <code>input</code>s.
+            Best used when you have a large number of choices or the <code>$.simplicitySelectSlider</code>
+            doesn't meet your needs.
+        </p>
+    </div>
+</div><div class='page-header'>
+  <h1>Single Handled</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            Create an <code>input</code> to hold the selection and a target <code>div</code> for the slider.
+        </p>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>name=</span><span class='s'>&quot;example&quot;</span> <span class='nt'>/&gt;</span>
+    <span class='nt'>&lt;div&gt;&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <p>
+            Then apply the <code>simplicitySelectSlider</code> widget to it.
+        </p>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicitySlider</span><span class='p'>({</span>
+    <span class='nx'>input</span><span class='o'>:</span> <span class='s1'>&#39;#example input&#39;</span><span class='p'>,</span>
+    <span class='nx'>min</span><span class='o'>:</span> <span class='mi'>0</span><span class='p'>,</span>
+    <span class='nx'>max</span><span class='o'>:</span> <span class='mi'>100</span><span class='p'>,</span>
+    <span class='nx'>any</span><span class='o'>:</span> <span class='mi'>0</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleSlider'>
+            <label><span class='badge'>1</span> select</label>
+            <input name='example' />
+            <label><span class='badge'>2</span> slider</label>
+            <div> </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleSlider div').simplicitySlider({
+                  input: '#exampleSlider input',
+                  min: 0,
+                  max: 100,
+                  any: 0
+                });
+            });
+        </script>
+        <p>
+            Change the value in <span class='badge'>1</span> and see how the
+            slider in <span class='badge'>2</span> is updated.
+        </p>
+        <p>
+            Move the slider in <span class='badge'>2</span> and see how the
+            value in <span class='badge'>1</span> is updated.
+        </p>
+    </div>
+</div><div class='page-header'>
+  <h1>Dual handled</h1>
+</div><div class='row'>
+    <div class='span8'>
+        <p>
+            Create two <code>input</code>s to hold the selection and a target <code>div</code> for the slider.
+        </p>
+
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;div</span> <span class='na'>id=</span><span class='s'>&quot;example&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>name=</span><span class='s'>&quot;min&quot;</span> <span class='nt'>/&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>name=</span><span class='s'>&quot;max&quot;</span> <span class='nt'>/&gt;</span>
+    <span class='nt'>&lt;div&gt;&lt;/div&gt;</span>
+<span class='nt'>&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+
+        <p>
+            Then apply the <code>simplicitySlider</code> widget to them.
+        </p>
+
+<div class='highlight'><pre><code class='javascript'><span class='nx'>$</span><span class='p'>(</span><span class='s1'>&#39;#example div&#39;</span><span class='p'>).</span><span class='nx'>simplicitySelectSlider</span><span class='p'>({</span>
+    <span class='nx'>input</span><span class='o'>:</span>  <span class='p'>[</span><span class='s1'>&#39;#example input[name=&quot;min&quot;]&#39;</span><span class='p'>,</span> <span class='s1'>&#39;#example input[name=&quot;max&quot;]&#39;</span><span class='p'>],</span>
+    <span class='nx'>min</span><span class='o'>:</span> <span class='mi'>0</span><span class='p'>,</span>
+    <span class='nx'>max</span><span class='o'>:</span> <span class='mi'>100</span><span class='p'>,</span>
+    <span class='nx'>values</span><span class='o'>:</span> <span class='p'>[</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>],</span>
+    <span class='nx'>any</span><span class='o'>:</span> <span class='p'>[</span><span class='mi'>0</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>],</span>
+    <span class='nx'>range</span><span class='o'>:</span> <span class='kc'>true</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+
+
+    </div>
+    <div class='span4'>
+        <h3>Example</h3>
+        <div class='well' id='exampleDualSlider'>
+            <label><span class='badge'>1</span> min</label>
+            <input name='min' />
+            <label><span class='badge'>2</span> max</label>
+            <input name='max' />
+            <label><span class='badge'>3</span> slider</label>
+            <div> </div>
+        </div>
+        <script type='text/javascript'>
+            $(function () {
+                $('#exampleDualSlider div').simplicitySlider({
+                  input: ['#exampleDualSlider input[name="min"]', '#exampleDualSlider input[name="max"]'],
+                  min: 0,
+                  max: 100,
+                  values: [0, 100],
+                  any: [0, 100],
+                  range: true
+                });
+            });
+        </script>
+        <p>
+            Change the values in <span class='badge'>1</span> or <span class='badge'>2</span> and see how the
+            slider in <span class='badge'>3</span> is updated.
+        </p>
+        <p>
+            Move the slider in <span class='badge'>3</span> and see how the
+            values in <span class='badge'>1</span> and <span class='badge'>2</span> are updated.
+        </p>
+    </div>
+</div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right">
+            <a href="#" onclick="window.scrollTo(0,0);return false;">Back to top</a>
+        </p>
+        <p>
+          Designed and built by the good folks at <a href="http://transparensee.com">Transparensee Systems</a>.
+        </p>
+      </div>
+    </footer>
+    <!--[if lt IE 9]>
+      <script src="http://cdn.transparensee.com/lib/json2/2010-11-17/json2.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+      <script src="http://cdn.transparensee.com/lib/xdr/984c41/xdr.min.js"></script>
+      <script src="http://cdn.transparensee.com/lib/jquery-plugin/bgiframe/2.1.2/jquery.bgiframe.min.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+    <script src="http://cdn.transparensee.com/lib/jquery-plugin/touchpunch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    <script src="http://cdn.transparensee.com/lib/bootstrap/2.3.0/bootstrap.min.js"></script>
+    <script src="http://cdn.transparensee.com/simplicity/4.0/simplicity.min.js"></script>
+    <script src="/js/documentation.js"></script>
+  </body>
+</html>
